@@ -10,7 +10,7 @@ const links = [
     { text: 'About me', href: '#' },
     { text: 'Work/Projects', href: '#' },
     { text: 'Other', href: '#' },
-    { text: 'Contact', href: 'contact.html' }
+    { text: 'Contact me', href: 'contact.html' }
 ];
 
 links.forEach(link => {
@@ -31,7 +31,7 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     if (nav.style.display === 'none' || !nav.style.display) {
         nav.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Empêche le scroll quand le menu est ouvert
+        document.body.style.overflow = 'hidden'; 
     } else {
         nav.style.display = 'none';
         document.body.style.overflow = 'auto';
