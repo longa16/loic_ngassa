@@ -22,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 /* Header avec Menu Burger */
 header {
     position: sticky;

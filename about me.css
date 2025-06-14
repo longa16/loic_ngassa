@@ -1,0 +1,117 @@
+       /* === About Container === */
+        .about-container {
+            flex: 1;
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* === Profile Card === */
+        .profile-glass-card {
+            text-align: center;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        /* === Content Cards === */
+        .about-glass-card {
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+        }
+
+        .about-glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .section-number {
+            color: rgba(29, 29, 31, 0.4);
+            margin-right: 0.5rem;
+        }
+
+        /* === Timeline === */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background: rgba(29, 29, 31, 0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--space-gray);
+            border: 2px solid var(--aluminum);
+        }
+
+        .timeline-content h3 {
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+        }
+
+        /* === Footer === */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--glass);
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* === Responsive === */
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+            
+            .profile-glass-card, 
+            .about-glass-card {
+                padding: 2rem;
+            }
+        }
+    

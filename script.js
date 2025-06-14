@@ -7,7 +7,7 @@ navLinks.className = 'nav-links';
 
 // Création des liens de navigation
 const links = [
-    { text: 'About me', href: '#' },
+    { text: 'About me', href: 'about me.html' },
     { text: 'Work/Projects', href: '#' },
     { text: 'Other', href: '#' },
     { text: 'Contact me', href: 'contact.html' }
