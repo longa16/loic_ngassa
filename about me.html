@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Minimal & Intentional</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about me.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/about me.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="script/translation.js"></script>
+    <script src="script/script.js" defer></script>
 
 </head>
 <body>
     <!-- Header avec Menu Burger -->
     <header>
-        <div class="logo">NGASSA.</div>
+    <div class="logo">NGASSA.</div>
+    <div class="header-right">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <div class="menu-burger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- About Section -->
     <main class="about-container">
         <div class="profile-glass-card">
-            <img src="assets/profile.jpg" alt="LOIC Y. NGASSA" class="profile-img">
+            <img src="moi.jpg" alt="LOIC Y. NGASSA" class="profile-img">
             <h1>LOIC Y. NGASSA</h1>
             <p class="subtitle">Designer & Architecte Digital</p>
         </div>
@@ -70,9 +80,5 @@
     <footer>
         <p>© 2023 — Crafted with intention</p>
     </footer>
-</body>
-</html>
-
-    <script src="script.js"></script>
 </body>
 </html>

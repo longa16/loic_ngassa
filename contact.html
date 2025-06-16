@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Minimal & Intentional</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="script/translation.js"></script>
+    <script src="script/script.js" defer></script>
 </head>
 <body>
     <!-- Header avec Menu Burger -->
     <header>
-        <div class="logo">NGASSA.</div>
+    <div class="logo">NGASSA.</div>
+    <div class="header-right">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <div class="menu-burger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Formulaire de Contact -->
 <main class="contact-container">
@@ -46,7 +56,7 @@
         </form>
     </div>
 </main>
-<script src="script.js"></script>
+
 
     <!-- Footer -->
     <footer>
