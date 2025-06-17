@@ -1,6 +1,145 @@
-<!-- Dans cette rubrique je mets tout ce que j'ai deja eu à realiser dans le cadre de mon projet professionnel'
- * Stage
- * Proejt d'ecole/personnel
- * Certification
- * Conferences/seminaires etc.
- -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/work.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Work | NGASSA</title>
+
+    <script src="script/translation.js"></script>
+    <script src="script/script.js" defer></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">NGASSA.</div>
+        <div class="header-right">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <div class="menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="work-container">
+        <!-- Navigation  -->
+        <nav class="work-nav">
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <button class="active" data-section="technologies">Technologies</button>
+                </li>
+                <li class="nav-item">
+                    <button data-section="stages">Stages</button>
+                </li>
+                <li class="nav-item">
+                    <button data-section="projets">Projets</button>
+                </li>
+                <li class="nav-item">
+                    <button data-section="certifications">Certifications</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Contenu Principal -->
+        <main class="work-content">
+            <!-- Technologies -->
+            <section id="technologies" class="content-section active">
+                <div class="project-card">
+                    <h3 class="project-title">Stack Technique</h3>
+                    <p class="project-description">Maîtrise des technologies clés pour la data science et l'analyse de données.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Spark</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stages -->
+            <section id="stages" class="content-section">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Data Scientist Junior</h3>
+                        <span class="project-date">Mai - Août 2023</span>
+                    </div>
+                    <p class="project-description">Développement de modèles prédictifs pour l'analyse des marchés financiers dans une startup FinTech.</p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projets -->
+            <section id="projets" class="content-section">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Système de Recommandation</h3>
+                        <span class="project-date">Projet Académique - 2023</span>
+                    </div>
+                    <p class="project-description">Algorithme de recommandation basé sur le filtrage collaboratif.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Numpy</span>
+                        <span class="tag">Algorithmes</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section id="certifications" class="content-section">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AWS Certified Data Analytics</h3>
+                        <span class="project-date">Février 2023</span>
+                    </div>
+                    <p class="project-description">Spécialisation dans les services AWS pour le traitement de données à grande échelle.</p>
+                    <div class="project-tags">
+                        <span class="tag">Big Data</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Kinesis</span>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Gestion des onglets
+        document.querySelectorAll('.nav-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Désactive tous les boutons et sections
+                document.querySelectorAll('.nav-item button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Active l'élément sélectionné
+                button.classList.add('active');
+                const sectionId = button.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
+
+    <footer>
+        <p>© 2025 — Conçu avec intention</p>
+    </footer>
+</body>
+</html>

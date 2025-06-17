@@ -7,8 +7,8 @@ navLinks.className = 'nav-links';
 
 const links = [
     { text: 'À propos', href: 'about me.html' },
-    { text: 'Projets', href: '#' },
-    { text: 'Autres', href: '#' },
+    { text: 'Projets', href: 'work.html' },
+    { text: 'Autres', href: 'other.html' },
     { text: 'Contact', href: 'contact.html' }
 ];
 
