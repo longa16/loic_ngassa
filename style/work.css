@@ -103,6 +103,7 @@
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     transition: var(--transition);
+    padding-bottom: 4rem;
 }
 
 .project-card:hover {
