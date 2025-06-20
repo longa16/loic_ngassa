@@ -1,0 +1,254 @@
+/* Secondary Navigation - Style Jony Ive */
+.secondary-nav {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass);
+    padding: 0 1.5rem;
+}
+
+.sub-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.sub-nav-link {
+    color: var(--space-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    opacity: 0.7;
+    transition: var(--transition);
+    font-weight: 300;
+}
+
+.sub-nav-link:hover {
+    opacity: 1;
+}
+
+.sub-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--space-gray);
+    transition: var(--transition);
+}
+
+.sub-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Animation subtile au hover */
+.sub-nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Conteneur du contenu des onglets */
+.tab-content-container {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style actif pour les liens */
+.sub-nav-link.active {
+    opacity: 1;
+    font-weight: 400;
+}
+
+.sub-nav-link.active::after {
+    width: 100%;
+}
+
+
+/* Grille de contenu */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Cartes de contenu */
+.content-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass);
+    transition: var(--transition);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.content-card p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    display: inline-block;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+
+/* Animation des cartes */
+@keyframes cardAppear {
+    from { 
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content-card {
+    animation: cardAppear 0.6s ease-out forwards;
+}
+
+.content-card:nth-child(1) { animation-delay: 0.1s; }
+.content-card:nth-child(2) { animation-delay: 0.2s; }
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    height: 500px;
+}
+
+/* Ajoutez ce CSS dans other.css */
+.experience-carousel {
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--glass);
+    aspect-ratio: 16/9;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.carousel-container:hover .carousel-nav {
+    opacity: 1;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--space-gray);
+    opacity: 0.3;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    padding: 1.5rem 1rem 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.carousel-slide:hover .carousel-caption {
+    opacity: 1;
+}
