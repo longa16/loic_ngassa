@@ -123,6 +123,100 @@
     transform: translateX(4px);
 }
 
+/* Contact Container */
+.contact-container {
+    flex: 1;
+    padding: 2rem;
+}
+
+.contact-split {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.contact-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-glass-card {
+    width: 100%;
+    padding: 2rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 2rem;
+}
+
+.social-title {
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    color: var(--space-gray);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--space-gray);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.social-link i {
+    font-size: 1.4rem;
+    width: 30px;
+    text-align: center;
+}
+
+.social-link:hover {
+    background: rgba(29, 29, 31, 0.05);
+    transform: translateX(5px);
+}
+
+/* Glass Card (conservé pour le formulaire) */
+.contact-glass-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 3rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
 /* Responsive */
 @media (max-width: 600px) {
     .contact-glass-card {
@@ -132,5 +226,32 @@
     
     .contact-title {
         font-size: 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .contact-split {
+        flex-direction: column;
+    }
+
+    .social-sidebar {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .social-glass-card {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-glass-card,
+    .social-glass-card {
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    .contact-title,
+    .social-title {
+        font-size: 1.8rem;
     }
 }
