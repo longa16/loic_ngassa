@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { img: 'assets/conference1.jpg', caption: 'VivaTech 2025 "Tesla Optimus"' },
             { img: 'assets/conference2.jpg', caption: 'Prototype fusée' }
         ],
-        'sport-content': [
+        'photography-content': [
             { img: 'assets/sport1.png', caption: 'Match de basketball' },
             { img: 'assets/sport1.png', caption: 'Match de basketball' },
             { img: 'assets/sport1.png', caption: 'Match de basketball' },
