@@ -45,16 +45,16 @@
         <nav class="work-nav">
             <ul class="nav-items">
                 <li class="nav-item">
-                    <button class="active" data-section="technologies">Technologies</button>
+                    <button data-section="stages">Experiences</button>
                 </li>
                 <li class="nav-item">
-                    <button data-section="stages">Stages</button>
+                    <button data-section="certifications">Certifications</button>
                 </li>
                 <li class="nav-item">
                     <button data-section="projets">Projets</button>
                 </li>
                 <li class="nav-item">
-                    <button data-section="certifications">Certifications</button>
+                    <button class="active" data-section="technologies">Technologies</button>
                 </li>
             </ul>
         </nav>
@@ -64,8 +64,11 @@
             <!-- Technologies -->
             <section id="technologies" class="content-section active">
                 <div class="project-card">
-                    <h3 class="project-title">Data science</h3>
-                    <p class="project-description">Bonne connaissance des technologies clés pour la data science et l'analyse de données.</p>
+                    <div class="cert-content">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4460/4460403.png" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">IA, ML et Data science</h3>
+                    </div>
+                    <br>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">TensorFlow</span>
@@ -75,8 +78,11 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-title">Développement web</h3>
-                    <p class="project-description">Bonne connaissance des technologies clés pour le développement web.</p>
+                     <div class="cert-content">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7903/7903652.png" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">Developpement web</h3>
+                        </div>
+                    <br>
                     <div class="project-tags">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
@@ -87,18 +93,24 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-title">Cloud Computing</h3>
-                    <p class="project-description">Bonne connaissance des technologies clés pour le cloud computing.</p>
+                    <div class="cert-content">
+                        <img src="https://cdn-icons-png.flaticon.com/128/165/165757.png" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">Cloud Computing</h3>
+                        </div>
+                    <br>
                     <div class="project-tags">
-                        <span class="tag">Serverless & compute</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Oracle</span>
                         <span class="tag">Sécurité & gestion des accès</span>
                         <span class="tag">Réseaux, stockage et bases de données</span>
-                        <span class="tag">AWS</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-title">DevOps</h3>
-                    <p class="project-description">Bonne connaissance des technologies clés pour le DevOps.</p>
+                    <div class="cert-content">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5266/5266248.png" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">DevOps</h3>
+                        </div>
+                    <br>
                     <div class="project-tags">
                         <span class="tag">Linux</span>
                         <span class="tag">Github Actions</span>
@@ -108,8 +120,11 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-title">Blockchain/Web3</h3>
-                    <p class="project-description">Bonne connaissance des technologies clés pour le développement de solutions Blockchain et Web3.</p>
+                    <div class="cert-content">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2152/2152349.png" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">Blockchain/web3</h3>
+                        </div>
+                    <br>
                     <div class="project-tags">
                         <span class="tag">Infrastructure & Réseaux</span>
                         <span class="tag">Solidity</span>
@@ -124,12 +139,15 @@
             <section id="stages" class="content-section">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Analyste BI Junior</h3>
-                        <span class="project-date">Mars 2023 - Aout 2023</span>
+                        <div class="cert-content">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWoAAACLCAMAAAB/aSNCAAAA51BMVEX////jewNJHQXleQDidwDicwDidQDldwDjbQDkcgDkcADidADjbgDtsYPwvJbhcQD00Lfqo2zsqnnqnmE8AAA1AADyx6n11b1GFwA6AAAyAAA/AABFFQD99/IwAAD66t5BCgDlhy744M/ywZ/88uvpk01ABwDQycfmgB0rAABuU0r08vFDDwDuroD77ePqmFf549S3rKnf2tifkItZNimSgXvrp3LOx8XmjDvu6+qrnprwt49gQDWAamPpj0ZSKxzCubaMeXNyWFCAa2ROJRIWAAAfAABnST8IAAAmAAC7sq6ZiYRcPDBaKbqqAAARMElEQVR4nO1daWOayhpWDIJAXSIoiJq4W9e4JG61UZNeb2P//++5DPsywKB42wSfD805CgM+vLz7zMRiN8DRrGfTw1xr2Y0nEvF47ef4ZVMoPlT+9m19MYyywyXJUKkUTUhIAEh/aTxFUSQxTtdvfIeCSjaHMxSuEAwBQaQosrap/+37/OwYNWqkJMpuNBt84xSTL/7tu/3EKCzJlEGzojAYUoLyj6RRcML4nqaY3E22z8HDC6PzTNCSkujmgRlsanq5MnoqNoYtnKSMx0Ez3cZfvenPiPpPktZ4TpFErvDkdmSznm6Rui6XFPe3m5EMgHqN0aijyHFh5H/CpqvrGpy8v5GNiKelSrQkz+Ms6lmjdJehNbK/XfP+vgwqeVIlmoo3gonn04sm2imqcKXb+0JoqDqaIFvnuBMNgiKU51R7CP3evhRGNUolenwuU4W4SjY5DPXWvhjSpMpS6xKRLBApRYvEb4LtgspSEWmqe2kkstEeWTqUG/tyqKdUfkKIQppjxYmhWpeP9fWgKg+qFY5TXEzJ5pUm/J3yqCFPKSIdnpM2ZpQRb1koK5ayJUt1myGOWVDekzAU0tdBpSu/7WQu3GFHcWXYW+yoo5IgQlYeGlqyWqJeQh/4k6IpJ50J6hrJ5ntZYVMhvy6fFRWFaSJMNW2gQd7kWkMlLjPdvVbiM6twfdPXsVgNmC66e70LFMmbHyKjhcsyfc1LqFxH3b8eAheBiF+3bKLoEDLaySeZBAK/jkU0INtGgrjyVf5pjEIWt73bF/LLQ/8M6zqfELLzEZ4Snf5auX0lmwRqE9aVPh1yqXB//4CbrqYH+HfKU3VtcfjikD0DOpSM8v7PvhObscJ0xWI76BGyriLiYVzsEwKUAgg6hIE6i+lM4HqvmLj+UeaxKfSgAgjRU/chXO7zIQfUJ3l54uPtV5UVHjGsjGGYyGNYFU51LI9HVYXUybCkbHUaYBp4fuDqhoCO1usGS/8oukQounO1mk6OvM70/NB+XbgcKtsGKnoBeoEKR31MhO+szjRW7q8PA67npkJokKuNXEMfsIl0PoyRnjED5eO7pLLLpUMHdmQFWEY8apZxA1xq8nIBW21LAxPVmCrgZUHgjs6j0/JVr50G+Mcge16XBy/r/wg85oISRI2AyhodrZIMEGoidfk4/en6hwvXorB1Hp+lIifWoIMxFYIv0N+9vcOZ5j9mMOMI/J5IaetGOEJ9+F5iB06S26IoYuXDDHaKItYRckJA7icVQuviBLNpj/Kgzc1ns/VaYL9DqQ7t0p8ERVm0whhp92pl+rA9KWpjOunDzyiAFyoRxrU/BcahKMzpc49jrULNugWKJoDHfJWWk38RFTKc0stE5No2qif+Zw3xsGKnTwD5Ha6FMdJ0bdXV7ZP/OQ9kWNrrE2AJLFMI/Xm7/fHRZhV7CKfVpMtTyHP0PjWaZFj+Vn9hj18EhLNkT3McwuX/fcj6I4Qy1+wwZ+2RIueS0zOjGR0NMjbpDxePDA1rvmTnWlwjnCdrEFCmz1mR15F7ebnfOKe1P23SCqA1/lF28wKQsw+rHf00/OaLe4i3UCmm76Ej++aQGFMaYmpPdvY7k33vtcy/Hk477+cAvu1P/1i55ud+V48p+T0cTGq880KSzuA5K9tZJikj4+y1rN/HM3gSOlCmYDvdC4z9KTbTtUwGPrBvBbzOmMtOR9UTnqodHP1n9rEs0ceXH9nSm5c6WHGHt609WsRKrp0gBp4o9Q7ifrhj8mabksWVj5N2qou1zJ3rIHTBdroXcCvVzTyTTLjenZ/BkWVKv9fVr70ivNh8PzvtjwOzTzGoPnsMtMJKNgcEaBB4OG6Flgfx/+Xxu6TpjXahujLOuNJxGdUNxv0JIlA91jSlgsXv0tsCsL17G7QHZRtz7A+voSY/HHYR432JNm4Bgep4AjfkGk716M6Lj0uoHmc8j/WlGlS6dFdPet07LCdw4vzHHJoNbbt7yiuQQz3auRYQYnPg7uEbNKrjd0anH5TqB0+RvoTqZdLnznyoHjGWQvlcCqXXksbleZcMP7dzG2n93yrnlOqBSyOZGXVKcTeNm4ZA/zKjJ0xgVFdo84+/kyybwyw2bKdLA6CYxbGJ6cQ5ZhFk9UwpiP781/z5NIfTDOARAE7nnDNbjWIYQRIGpMt1hvL3VkhuVT6pkX2nF8hgVNf0Z3KHJ1v3374N7+2DFW2nx7uNtCt009AwtAedWeZkb882sk8uGFhFS754cahWBVbUSSs/io9mWWU9Blts2w6qH11bbgwkFCWmyy009bXUFYP2CYTqhi6pGd/1S7TTEyj5nyZjvCqF80LrHG2xijJWnd1kL6nqcpvlxN7pY9YrD9qi+CjTz3kOd7AbUkms/eMiYBeZJx+q65pYZbRPnFRXdNFj/JM6gagea29L8uwcAsg1Udaf1n8+zgVgGw+zhfT2T//8Zo/703p22oqi4lKsFrvdruOgsN95E50aBCG9BxKpVNaH6goC1RtNn2YQ8ldBqH7QhNrXzXAHQUByTYBKLYg59T4MbXtq873pXuQElmWFUvu4n60/dovFYvexPm3fSwJEV6PknEAaJtVApTqpfeKkWmP6DmVeZBCq73VLgTCwC+SmSI/vV1bZ5TBeMAIVoFckzgWJebE9cOsA8S8QANsshVHeVBdxu1w5qNYOiWdQtGkQqrXHTJ+fbG4ygcoCK86FTi/wf/yGfQJ3kfOmuqJ/q+sGB9VDVarvkLp4AlCt2wkcZWA4HqhAGdST08NAgK+/Jzv3Y53qZDrrwCbpcECcVNfUY3Ck6TyGs1eAw2iMaWjP8ILKHIge0Du5VqVzmMZEPw0iO9Y/jRAmiVtB07QePzCGD+egWjecSP1SRghDw2HYsJyqqpMXtCXJEQzy3Poe1Oz5YgBpIbOClHN7cQRkTElhO9VNh4/iCd/A3ND4mk+fuaC0rxokNEzPE2rJfPqNDIxzHCmzZxYLO9UPGtVoUxECUN3VPrmgrwA0cuGoHagziNeMBN8oRl4lBEmqaQ+pflKpRopJ/m2qD+fpDynC9LOLFDLVcdww4q5SjTbPJADVmr39v1E9d+2d9qPar5prk2o9sSaZQw16GslIjtmpdsaT3r9dpxqHwzCLWliO5trAEUhXv55NtZ9UW3V18ltDQ0H9m07f63nUjD01p3sgWgI1g7SYn+HsFeEwgnvNYU9e0MgZyAPpOXNJaPDV1VYPxIWplsq1roodVGtHJJFiugAhTEF9iIklysBwBPKrn521QyTwmM/ANr/aRSPq+oFR3WYH1ekkMnmxQFSPdNV0/uKXgaLFnXAe1b4pa1u06GZ8fmrBoPpmO6jW7WIGRacGyYFoLsgF4WKwHIgzAwJTKY7POOhUOhNQciAxZ8zmzOxpnkIcpWM7CNUN3Qycbxj9MnsWPNtTIOWt09Uuv9m45l/9xkXK7Bkxm2acnFTrlu4OQakGKg3ofiR+tr8HzVe7oW8X6/L22eFrt9e2hnb3yq8GpHy1oau1TCak4NXVxDq59P1Rgaje6OXhs4NzSBXGAxM719zUob/btvl0bf+aub0KA7U9Fb24qD0KCNV1owTo64YEotoUX2XO3HwFVlv0gF1hiB8nu1vC/7GYTx4yC9cOW23xLqeWoIcS1P/MtYz+Di3FAauYD40QEE+O7dVyuWJet50e79r7HE29lHqX4JP+EOPJzNJeLJfhEwo6KuY+OFrV9eNp9dvOtTD9MTAf4T+orWKu9IEYzRj2RhB7z4yl5aZlateAt0dmbae7HKccbEhhweAa3geS9Hk7bH0gCFxb5Lp9iq2eRU40V7v4P7GyiWvuw29Iex+INwyLB28k82tCwp1UexxseuHTjPexfvGNrbsJAVuz1VPqhtP19p3jBFZsPw4kCPvY3HRQyc/Xc3Q3eTJ9p2tKl/bIvHdr3dlUx7KMZ4+abyiZCuKCSOjFnk220ZRIWnV269nz/m17OPQ+YmtWhB0ERZCevaRpoXi3pt9Cxkuwz6c6Nqp5neJLta0T1Q+LEraaVA0F4nIUtu6s52wZjWv0TtQk41Ua0FG5z7i3QV9ANdhQCHftc/Wl2tpf7YtDma9OdA+PdZmAUeLbAva87mkd1yVPfa31V7tbJ9lK4pnkvcUN9Jg1UGmA5n5od79hFs+ZNRAr5jMZGjqwn1m0zRrwwxQoD+6kcS3Cj9oBTc23wQxdtTmV8ygv6rMG8hBoXtfLt3TW7v7X1cksQ2grU6XYGJon1GgYa86ePpXGAxtYyPFU2LxABs77TmhmgizJIVcHyq8q1aUd/Ci5c09d9G3yKvenCu7TB/S5MF8e4wAzRPfA1rHvU1V9uMzX6FctuqWz5TybhWvBrMUnRoB5izOgPua71bts71g3pfAh6Y+yeSpHR8AeXafRRGjeIvps3InSnLAWFfX75nbcO2/raJL0jZsBjdRsXPQ55p3vclO7HJrzVVfuQArE2mWzHXiUFyM0xzzAygnrZy1px87dXWVQF2ubreBJgC5HpiBSKycEWQ/kQw64y8K6s3M9RpJhjDNN7FpzWNU9No/UeiBBVrk5AS+v3PvYctzRTVBfeezRZBQlDV/duY8YqVVuAq3d1JPEmu18SL5yuQpPj0pRTtmUo5aY5jw6USO2dlOgZcHeWJAl7R8lysV3mGBLqpoz+j7WJVf327h0hFb7DbTO3psol8BBfg/qhnBmx27PWT1sOyK3zl6w1SOPA5m9WUlk+ZKD6wmLPer/c2B9usgit3pksDVR+6LiYEzWH68Dh8jOedM0I4z3iF1ikVwTNdhKvztBaw37YO0zRiWjqKX71rtYr+zdBBLBlX4Drl/9h2eVEGU7GNjC8/2jtojQ6jvLlfnvXtWuSK5fHWxV9oWg5jjeeaxkXYWC09tO948Yz/3wUh8VKoqrsgfcawDjlVWZtiXeuhLWB6tlP1bVATv37quO6F4DwXbQWIuYKGuOxbxqaTM9llm1trUX4csoG4jqDhrqvjCIxZB+CdM0x87cJzYtYYJfK4IOIqr7wgTb7eggYuzO+XGnira0HkB0dztS9/BC3G9yeuBEWLy9HYi+3dQKshHewyvgznT9dwG67t5MdEaQEICuqujuTBdwv8WJOPi9g3wuYALC0ljdSO+3GHAX0QnIb0CmbnEozevjiO8iGmxv3MVvQShB5PfICcJ3n9lzt71xtR2f0aKKRafTgSxYOJU+X3hTfdvxOXbbx/z/CXkr5usGFkWF6Uj0M3miRgM1ekWuVaYjGJA7ILshdPdaOkTRHhR6m/EXRgXkJhJE4jpp5IbCNPIaRl8bTYVr6hrxxVBhOmKFF3dUEjLXZAh7xdjQom4ybUWlS8umK2RKRnFcHvamp81YgnRIIlULU2EXSOLme0CQl191AmFtYlSM5QWaiJs/7UBakUGqFY7XV8RlnUQT5y8T83VRTxGKYIfwwlfG2oO7fKyviMpSViIJqntpT26apBXlEZ2dWYNCVSIE2bokNVQgZBubSMWjnmDywqimCDZB5s+lKRun1OcViamJF6ChvPsJmvTdkQJ6OqESTdVuIu2HSl7RIhJb3UYwb+TphVFMayIVxi6lEcDTklHJTpFj5Flvo3SXUV6IBH6LD5FRr6lkS6JNjgv+rnF90yVVgZaIPnNZqYii/lPV2bJsJ14Krpq3Uk+3GE1xSAdT325EB8SDrnglAukURXZzm0L9oakRWRk9FQvDFkFS+mEJmuneEh5nobAkDRoB3ymKYkiSZJR/GSqFE8b3NMXkIjMfMXyMGjUyRRt0uoHAKSZ/yytdiEo2hzMU7ko3Ialnsra5yXM4GGWHS0ltpCQBJ1SVIf2lcUmhkMQ4Xb8ZwnDRrGfTw1xr2Y0nEvF47ef4ZVMoPlzA8v8AYoqsuOHevdMAAAAASUVORK5CYII=" alt="Logo bicec" class="cert-logo">
+                        <h3 class="project-title">Analyste BI junior - BICEC</h3>
+                        </div>
+                        <span class="project-date">Mars - Aout 2023</span>
                     </div>
-                    <p class="project-description">chargé de concevoir un dashboard de pilotage destiné à suivre les <br> 
-                        performances des plateformes digitales (applications mobiles, services en ligne) et des services <br>
-                         monétiques (distributeurs, cartes bancaires, paiements) de la banque<br>.</p>
+                    <p class="project-description">chargé de concevoir un dashboard de pilotage destiné à suivre les
+                        performances des plateformes <br> digitales  (applications mobiles, services en ligne) et des services
+                         monétiques (distributeurs, cartes bancaires, paiements) de la banque.</p>
                     <div class="project-tags"><span class="tag">Data Modeling </span>
                         <span class="tag">Data Visualization </span>
                         <span class="tag">SQL </span>
@@ -137,12 +155,15 @@
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Analyste de donnée Junior</h3>
-                        <span class="project-date">Mars 2023 - Juin 2023</span>
+                        <div class="cert-content">
+                        <img src="data:image/png;base64,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" alt="Logo bicec" class="cert-logo">
+                        <h3 class="project-title">Analyste de données junior - BICEC</h3>
+                        </div>
+                        <span class="project-date">Fevrier - Juin 2022</span>
                     </div>
-                    <p class="project-description">Développement d’une solution de reporting BI avec Talend et Power BI <br>
-                        conception et de développement d'une solution complète de suivi et de reporting des <br>
-                        opérations de guichets et de caisses, à l’aide des outils Talend pour l’intégration de <br>
+                    <p class="project-description">Développement d’une solution de reporting BI avec Talend et Power BI
+                        conception et de <br> développement d'une solution complète de suivi et de reporting des
+                        opérations de guichets <br> et de caisses, à l’aide des outils Talend pour l’intégration de
                         données et Power BI pour la visualisation.</p>
                     <div class="project-tags"><span class="tag">Power bi</span>
                         <span class="tag">Talend</span>
@@ -151,13 +172,16 @@
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Développeur Web Junior</h3>
+                        <div class="cert-content">
+                        <img src="data:image/jpeg;base64,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" alt="Logo ANSSI" class="cert-logo">
+                        <h3 class="project-title">Developpeur web junior - SCI Real Immovable</h3>
+                        </div>
                         <span class="project-date">Février - Mai 2021</span>
                     </div>
-                    <p class="project-description">Développement d’un site web immobilier avec Symfony l'objectif <br> 
-                        etait de digitaliser la vitrine de l’entreprise en permettant la publication et la <br>  
-                        gestion d’annonces immobilières (ventes, locations), ainsi que l’interaction avec les<br>   
-                        clients via un formulaire de contact et un espace d’administration sécurisé. <br> </p>
+                    <p class="project-description">Développement d’un site web immobilier avec Symfony l'objectif
+                        etait de digitaliser la vitrine <br> de l’entreprise en permettant la publication et la
+                        gestion d’annonces immobilières, ainsi que <br> l’interaction avec les
+                        clients via un formulaire de contact et un espace d’administration sécurisé.</p>
                     <div class="project-tags">
                         <span class="tag">Symfony</span>
                         <span class="tag">ORM</span>
@@ -171,29 +195,85 @@
             <section id="projets" class="content-section">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Retrouvez l'ensemble de mes projets sur mon profil Github</h3>
+                        <p class="project-description">Retrouvez l'ensemble de mes projets sur mon profil Github</p>
                     </div>
-                    <a href="https://github.com/longa16" target="_blank">Mon profil Github</a>
+                    <a href="https://github.com/longa16" target="_blank" class="cert-link">Mon profil Github</a>
                 </div>
             </section>
 
             <!-- Certifications -->
             <section id="certifications" class="content-section">
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">AWS Certified Data Analytics</h3>
-                        <span class="project-date">Février 2023</span>
-                    </div>
-                    <p class="project-description">Spécialisation dans les services AWS pour le traitement de données à grande 
-                        échelle.</p>
-                    <div class="project-tags">
-                        <span class="tag">Big Data</span>
-                        <span class="tag">Cloud</span>
-                        <span class="tag">Kinesis</span>
-                    </div>
-                </div>
-                
-            </section>
+    <div class="project-header">
+        <h3 class="project-title">SecNumAcademie - ANSSI</h3>
+        <span class="project-date">Juillet 2025</span>
+    </div>
+    <div class="cert-content">
+        <img src="assets/anssi-logo.png" alt="Logo ANSSI" class="cert-logo">
+        <div class="cert-text">
+            <p class="project-description">
+                Formation en cybersécurité proposée par l'ANSSI, abordant les fondamentaux <br>
+                de la sécurité numérique.
+            </p>
+            <a href="https://drive.google.com/file/d/18GUz966CgukySk52TTwh2wpvhwoxnA5S/view" target="_blank" class="cert-link">Voir la certification</a>
+        </div>
+    </div>
+    <div class="project-tags">
+        <span class="tag">Cybersécurité</span>
+        <span class="tag">Sécurité numérique</span>
+        <span class="tag">Sensibilisation</span>
+    </div>
+</div>
+
+        <div class="project-card">
+    <div class="project-header">
+        <h3 class="project-title">Atelier RGPD – CNIL</h3>
+        <span class="project-date">Mai 2025</span>
+    </div>
+    <div class="cert-content">
+        <img src="assets/cnil-logo.png" alt="Logo CNIL" class="cert-logo">
+        <div class="cert-text">
+            <p class="project-description">
+                Sensibilisation au Règlement Général sur la Protection des Données (RGPD) via l’atelier <br>
+                pédagogique de la CNIL.
+            </p>
+            <a href="https://drive.google.com/file/d/13zrsFPk0P6GVd6UQ301g92WA4xTTsXCx/view?usp=sharing" target="_blank" class="cert-link">Voir la certification</a>
+        </div>
+    </div>
+    <div class="project-tags">
+        <span class="tag">Données personnelles</span>
+        <span class="tag">RGPD</span>
+        <span class="tag">CNIL</span>
+    </div>
+</div>
+
+
+                <div class="project-card">
+    <div class="project-header">
+        <h3 class="project-title">L'IA et moi : Usage éthique et raisonné
+</h3>
+        <span class="project-date">juin 2025</span>
+    </div>
+    <div class="cert-content">
+        <img src="data:image/png;base64,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" alt="Logo CNIL" class="cert-logo">
+        <div class="cert-text">
+            <p class="project-description">
+                intégrer les outils d'IA générative dans mes pratiques" et de l'acquisition de la compétence "Intégrer
+                les outils de l’IA générative dans les pratiques étudiantes.
+            </p>
+            <a href="https://openbadgefactory.com/v1/assertion/28e3ec6195dd2a726ddff01083ca180f047a99d5" target="_blank" class="cert-link">Voir la certification</a>
+        </div>
+    </div>
+    <div class="project-tags">
+        <span class="tag">IAG</span>
+        <span class="tag">prompting</span>
+        <span class="tag">veille technologique</span>
+    </div>
+</div>
+
+    </section>
+
+
         </main>
     </div>
 

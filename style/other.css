@@ -1,3 +1,28 @@
+root {
+    --aluminum: #e8e8e8;
+    --space-gray: #1d1d1f;
+    --glass: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Georgia, serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--space-gray);
+    background-color: var(--aluminum);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Secondary Navigation - Style Jony Ive */
 .secondary-nav {
     width: 100%;

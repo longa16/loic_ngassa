@@ -178,3 +178,35 @@
         box-shadow: inset 0 -2px 0 var(--space-gray);
     }
 }
+
+.cert-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cert-logo {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+}
+
+.cert-text {
+    flex: 1;
+}
+
+.cert-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0073e6;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.cert-link:hover {
+    border-bottom: 1px solid #0073e6;
+}
