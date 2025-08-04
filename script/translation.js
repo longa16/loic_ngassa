@@ -149,7 +149,7 @@ const translations = {
 
         // Page d'accueil (index.html)
         'hero.name': 'LOIC Y. NGASSA',
-        'hero.description': 'Future ML Engineer / Data sciencist, passionate about new technologies.',
+        'hero.description': 'Future ML Engineer / Data scientist, passionate about new technologies.',
         'footer.copyright': '© 2025 — Designed with intention',
 
         // Page À propos (about me.html)
