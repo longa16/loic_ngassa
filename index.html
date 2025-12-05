@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Minimal & Intentional</title>
+    
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/about me.css">
+    <link rel="stylesheet" href="style/work.css">
+    <link rel="stylesheet" href="style/other.css">
+    <link rel="stylesheet" href="style/contact.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.png" type="image/png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="script/translation.js"></script>
     <script src="script/script.js" defer></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJGW5BKD2S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="script/other.js" defer></script>
 
-  gtag('config', 'G-MJGW5BKD2S');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJGW5BKD2S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MJGW5BKD2S');
+    </script>
+    
+    <style>
+        /* Ajout pour le défilement fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Ajustement pour compenser la barre de menu fixe lors du scroll */
+        section {
+            scroll-margin-top: 100px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            min-height: auto; /* Permet aux sections de s'empiler naturellement */
+        }
+        /* Séparateur visuel subtil entre les sections */
+        section:not(:last-of-type) {
+            border-bottom: 1px solid var(--glass);
+        }
+    </style>
+</head>
+
 <body>
     <header>
         <div class="logo">NGASSA.</div>
@@ -38,15 +63,235 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>LOIC Y. NGASSA</h1>
         <p>Futur ML Ingénieur / Data scientist, passionné par les nouvelles technologies.</p>
+        
+        <div class="hero-btns">
+            <a href="assets/LOIC_NGASSA_CV (1).pdf" download="CV_Loic_Ngassa" class="btn btn-primary">
+                Télécharger mon CV
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+                Contactez-moi
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <main class="about-container">
+            <div class="profile-glass-card" style="display: flex; gap: 3rem; align-items: center; text-align: left;">
+                <div style="flex: 1;">
+                    <img style="margin-left: 60px;" src="assets/yann.jpg" alt="LOIC Y. NGASSA" class="profile-img">
+                    <h1 style="font-size: 1.5rem;">LOIC Y. NGASSA</h1>
+                    <p class="subtitle">Étudiant en Ingénierie Informatique</p>
+                </div>
+                <div style="flex: 2;">
+                    <h2 style="margin-bottom: 20px; text-align: center;">À propos de moi</h2>
+                    <p style="margin-bottom: 20px;">Passionné par l'intelligence artificielle et ses applications concrètes, je consacre mon temps à explorer les domaines du Machine Learning, du Deep Learning et de la Data Science. Mon objectif est de développer des solutions intelligentes qui améliorent notre quotidien.</p>
+                    <p style="margin-bottom: 20px;">Convaincu que l'IA représente l'une des révolutions technologiques les plus importantes de notre siècle, je me forme constamment aux dernières avancées dans ce domaine, des modèles de langage aux réseaux de neurones convolutifs, en passant par les systèmes de recommandation.</p>
+                    <p>En parallèle de mes études, je travaille sur divers projets personnels alliant IA et développement web, avec une attention particulière portée à l'expérience utilisateur et aux architectures cloud.</p>
+                </div>
+            </div>
+            
+            <div class="about-glass-card">
+                <h2><span class="section-number">01</span> Philosophie</h2>
+                <p><i>"L'intelligence artificielle est une extension de l'intelligence humaine, pas une menace."</i><br>- Yann LeCun</p>
+            </div>
+
+            <div class="two-columns-section">
+                <div class="about-glass-card">
+                    <h2><span class="section-number">02</span> Parcours</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2023 - Présent</h3>
+                                <p>Ingénierie informatique · INSA HdF</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2020 - 2023</h3>
+                                <p>Classes préparatoires · IUCSJD</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>- 2020</h3>
+                                <p>Baccalauréat scientifique · LBNB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-glass-card">
+                    <h2><span class="section-number">03</span>Compétences</h2>
+                    <div class="project-tags">
+                        <span class="tag">Langages: Python (pandas, Matplotlib, scikit-learn, PyTorch/TensorFlow), SQL</span>
+                        <span class="tag">Statistiques,Probabilités</span>
+                        <span class="tag">Modélisation (régression, clustering, arbres, etc.)</span>
+                        <span class="tag">MLOps : MLflow, TensorFlow Serving, Kubernetes, Docker, Git </span>
+                        <span class="tag">Visualisation : Power BI, Tableau</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-glass-card">
+                <h2><span class="section-number">04</span>Autres Compétences</h2>
+                <div class="project-tags">
+                    <span class="tag">Cloud computing: AWS, Azure</span>
+                    <span class="tag">Développement web: PHP, JavaScript, HTML/CSS</span>
+                    <span class="tag">DevOps: CI/CD, Kubernetes, Docker</span>
+                    <span class="tag">Blockchain/Web3</span>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section id="work">
+        <div class="work-container">
+            <nav class="work-nav">
+                <ul class="nav-items">
+                    <li class="nav-item"><button data-section="stages" class="active">Experiences</button></li>
+                    <li class="nav-item"><button data-section="certifications">Certifications</button></li>
+                    <li class="nav-item"><button data-section="projets">Projets</button></li>
+                </ul>
+            </nav>
+
+            <main class="work-content">
+                <section id="stages" class="content-section active">
+                     <div class="project-card">
+                        <div class="project-header">
+                            <div class="cert-content">
+                            <img src="assets/bicec.png" alt="Logo bicec" class="cert-logo" style="width:50px; height:auto; border-radius:0;">
+                            <h3 class="project-title">Analyste BI junior - BICEC</h3>
+                            </div>
+                            <span class="project-date">Mars - Aout 2023</span>
+                        </div>
+                        <p class="project-description">chargé de concevoir un dashboard de pilotage destiné à suivre les performances des plateformes <br> digitales et des services monétiques.</p>
+                        <div class="project-tags"><span class="tag">Data Modeling </span><span class="tag">Data Visualization </span><span class="tag">SQL </span></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="cert-content">
+                            <img src="assets/bicec.png" alt="Logo bicec" class="cert-logo" style="width:50px; height:auto; border-radius:0;">
+                            <h3 class="project-title">Analyste de données junior - BICEC</h3>
+                            </div>
+                            <span class="project-date">Fevrier - Juin 2022</span>
+                        </div>
+                        <p class="project-description">Développement d’une solution de reporting BI avec Talend et Power BI.</p>
+                        <div class="project-tags"><span class="tag">Power bi</span><span class="tag">Talend</span><span class="tag">Python</span></div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-header">
+                             <h3 class="project-title">Developpeur web junior - SCI Real Immovable</h3>
+                             <span class="project-date">Février - Mai 2021</span>
+                        </div>
+                        <p class="project-description">Développement d’un site web immobilier avec Symfony.</p>
+                        <div class="project-tags"><span class="tag">Symfony</span><span class="tag">ORM</span><span class="tag">MVC</span></div>
+                    </div>
+                </section>
+
+                <section id="certifications" class="content-section">
+                    <div class="project-card">
+                        <div class="project-header"><h3 class="project-title">SecNumAcademie - ANSSI</h3><span class="project-date">Juillet 2025</span></div>
+                        <div class="cert-content"><img src="assets/anssi-logo.png" alt="Logo ANSSI" class="cert-logo"><div class="cert-text"><p class="project-description">Formation en cybersécurité.</p><a href="#" class="cert-link">Voir la certification</a></div></div>
+                    </div>
+                    </section>
+
+                <section id="projets" class="content-section">
+                     <div class="project-card">
+                        <div class="project-header"><p class="project-description">Retrouvez l'ensemble de mes projets sur mon profil Github</p></div>
+                        <a href="https://github.com/longa16" target="_blank" class="cert-link">Mon profil Github</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header"><h3 class="project-title">Blockchain BTC</h3></div>
+                        <div class="cert-content">
+                            <div class="cert-text"><p class="project-description">Simulateur de minage Bitcoin en PHP.</p><a href="#" class="cert-link">Voir le projet</a></div>
+                        </div>
+                        <div class="project-tags"><span class="tag">Cryptographie</span><span class="tag">PHP</span></div>
+                    </div>
+                     </section>
+            </main>
+        </div>
+    </section>
+
+    <section id="other">
+        <div class="secondary-nav">
+            <nav class="sub-nav">
+                <ul>
+                    <li><a href="#" class="sub-nav-link active" data-tab="design">Engagements</a></li>
+                    <li><a href="#" class="sub-nav-link" data-tab="engineering">Salon</a></li>
+                    <li><a href="#" class="sub-nav-link" data-tab="photography">Sport/Autres</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="tab-content-container">
+            <div class="tab-content active" id="design-content">
+                <div class="content-grid">
+                    <article class="content-card"><h3>Service Civique</h3><h5>EA Le Sextant</h5><p>Agir pour les personnes en situation de handicap.</p><span class="date">Avril - Sept 2025</span></article>
+                    <article class="content-card"><h3>Mentorat</h3><h5>AFEV</h5><p>Accompagnement éducatif.</p><span class="date">2023-2024</span></article>
+                </div>
+                 <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+            </div>
+
+            <div class="tab-content" id="engineering-content">
+                <div class="content-grid">
+                    <article class="content-card"><h3>VivaTech 2025</h3><p>Salon innovation Paris.</p><span class="date">2025</span></article>
+                    <article class="content-card"><h3>ICMAIE</h3><p>Conférence IA & Métavers.</p><span class="date">2025</span></article>
+                </div>
+                <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+            </div>
+
+            <div class="tab-content" id="photography-content">
+                 <div class="content-grid">
+                    <article class="content-card"><h3>Basketball</h3><p>Passion et compétition.</p><span class="date">2013-Présent</span></article>
+                </div>
+                <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+            </div>
+        </main>
+    </section>
+
+    <section id="contact">
+        <main class="contact-container">
+            <div class="social-sidebar">
+                <div class="social-glass-card">
+                    <h2 class="social-title">Connexion</h2>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/loïc-ngassa/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                        <a href="https://github.com/longa16" target="_blank" class="social-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+                        <a href="https://x.com/WangJim14" target="_blank" class="social-link"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                        <a href="mailto:yannngassa35@gmail.com" class="social-link"><i class="fas fa-envelope"></i><span>Email</span></a>
+                    </div>
+                </div>
+            </div>
+        </main>
     </section>
 
     <footer>
         <p>© 2025 — Conçu avec intention</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.work-nav .nav-item button');
+            if(buttons.length > 0) {
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        document.querySelectorAll('.work-nav .nav-item button').forEach(btn => btn.classList.remove('active'));
+                        document.querySelectorAll('.work-content .content-section').forEach(section => section.classList.remove('active'));
+                        
+                        button.classList.add('active');
+                        const sectionId = button.getAttribute('data-section');
+                        const targetSection = document.getElementById(sectionId);
+                        if(targetSection) targetSection.classList.add('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
-

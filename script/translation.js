@@ -336,32 +336,15 @@ function updateContent(lang) {
 }
 
 // Fonction pour les traductions spécifiques à chaque page
+// Remplace la fonction updatePageSpecificContent par celle-ci :
 function updatePageSpecificContent(lang) {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    console.log('Current page:', currentPage);
-
-    switch(currentPage) {
-        case 'index.html':
-        case '':
-            updateHomePage(lang);
-            break;
-        case 'about me.html':
-        case 'about%20me.html':
-            updateAboutPage(lang);
-            break;
-        case 'contact.html':
-            updateContactPage(lang);
-            break;
-        case 'other.html':
-            updateOtherPage(lang);
-            break;
-        case 'work.html':
-            updateWorkPage(lang);
-            break;
-        default:
-            // Fallback pour les pages non reconnues
-            updateGenericPage(lang);
-    }
+    // Sur une Single Page App, on met tout à jour en même temps
+    updateHomePage(lang);
+    updateAboutPage(lang);
+    updateWorkPage(lang);
+    updateOtherPage(lang);
+    updateContactPage(lang);
+    updateGenericPage(lang);
 }
 
 // Mise à jour générique

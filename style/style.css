@@ -112,66 +112,93 @@ header {
 }
 
 /* Hero Section */
+/* --- MODIFICATION DE LA SECTION HERO --- */
 .hero {
-    flex: 1;
+    /* Force la section à prendre toute la hauteur de la fenêtre */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 2rem;
+    /* Correction pour la navbar fixe : évite que le contenu soit caché sous le header */
+    margin-top: -80px; 
+    padding-top: 80px;
 }
 
 .hero h1 {
-    font-size: clamp(2.0rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Légèrement plus grand pour l'impact */
     font-weight: 300;
     letter-spacing: -1px;
+    margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; /* Espace avant les boutons */
+    background: linear-gradient(90deg, var(--space-gray), #8a8989, var(--space-gray));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientFlow 4s ease-in-out infinite;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--glass);
-    margin-top: auto;
+/* --- NOUVEAUX STYLES POUR LES BOUTONS --- */
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-footer p {
-    font-size: 0.8rem;
-    opacity: 0.6;
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid var(--space-gray);
 }
 
-/* Responsive */
+/* Bouton Principal (CV) : Fond sombre, texte clair */
+.btn-primary {
+    background-color: var(--space-gray);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a3a3c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Bouton Secondaire (Contact) : Fond transparent, bordure sombre */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--space-gray);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0,0,0,0.05);
+    transform: translateY(-3px);
+}
+
+/* Adaptation Mobile pour les boutons */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
-
-/* Fullscreen Menu */
-.fullscreen-menu {
-    display: none; 
-}
-
-/* Animation du burger quand actif */
-.menu-burger.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-}
-
-.menu-burger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-burger.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-}
-
 .hero p {
     background: linear-gradient(90deg, var(--space-gray), #c5c4c4, var(--space-gray));
     background-size: 200% auto;

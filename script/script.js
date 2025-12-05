@@ -5,11 +5,13 @@ nav.className = 'fullscreen-menu';
 const navLinks = document.createElement('ul');
 navLinks.className = 'nav-links';
 
+// MODIFICATION ICI : Utilisation des ID (#) au lieu des fichiers .html
 const links = [
-    { text: 'À propos', href: 'about me.html' },
-    { text: 'Projets', href: 'work.html' },
-    { text: 'Autres', href: 'other.html' },
-    { text: 'Contact', href: 'contact.html' }
+    { text: 'Accueil', href: '#home' },
+    { text: 'À propos', href: '#about' },
+    { text: 'Projets', href: '#work' },
+    { text: 'Autres', href: '#other' },
+    { text: 'Contact', href: '#contact' }
 ];
 
 links.forEach(link => {
@@ -17,6 +19,14 @@ links.forEach(link => {
     const a = document.createElement('a');
     a.href = link.href;
     a.textContent = link.text;
+    
+    // Fermer le menu quand on clique sur un lien
+    a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        nav.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
     li.appendChild(a);
     navLinks.appendChild(li);
 });
@@ -37,7 +47,7 @@ burger.addEventListener('click', () => {
     }
 });
 
-// Styles du menu
+// Styles du menu (Inchangé)
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeIn {
