@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { img: 'assets/Mboa-Paris.webp', caption: 'MBOA Paris 2024' },
         ],
         'engineering-content': [
-            { img: 'https://media.licdn.com/dms/image/v2/D4E22AQGAsQKzPb2cFQ/feedshare-shrink_2048_1536/B4EZdaGZpzH0Ao-/0/1749563319245?e=1756944000&v=beta&t=0NUc8JbT2IjkK657Q_RcWB3E7rPgfwa955pNGfzsSPs', caption: 'ICMAIE 2025"' },
             { img: 'assets/conference1.jpg', caption: 'VivaTech 2025 "Tesla Optimus"' },
-            { img: 'https://media.licdn.com/dms/image/v2/D4E22AQEXJtLah3OXfQ/feedshare-shrink_2048_1536/B4EZdaGZpuHgAo-/0/1749563319542?e=1756944000&v=beta&t=87pu-JIK_fKFREuisoPserlHhsv5ojqA_F48iobFk-8', caption: 'ICMAIE 2025"' },
-            { img: 'https://media.licdn.com/dms/image/v2/D4E12AQGqqNSP9rLIfw/article-cover_image-shrink_600_2000/B4EZePM7W4G4AU-/0/1750454222025?e=1759363200&v=beta&t=1smpTsSkIKe_pQORJpreh1i2t2zIFoX22JO_iJb6P-c', caption: 'VivaTech 2025' },
             { img: 'assets/conference2.jpg', caption: 'Prototype fusée' }
         ],
         'photography-content': [
