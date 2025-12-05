@@ -2,6 +2,7 @@
 const translations = {
     fr: {
         // Navigation et Menu
+        'nav.home': 'Accueil',
         'nav.about': 'À propos',
         'nav.projects': 'Projets',
         'nav.other': 'Autres',
@@ -142,6 +143,7 @@ const translations = {
 
     en: {
         // Navigation et Menu
+        'nav.home': 'Home',
         'nav.about': 'About',
         'nav.projects': 'Projects',
         'nav.other': 'Other',
@@ -302,6 +304,7 @@ function updateBurgerMenu(lang) {
     setTimeout(() => {
         const navLinks = document.querySelectorAll('.nav-links a');
         const menuItems = [
+            'nav.home',
             'nav.about',
             'nav.projects',
             'nav.other',
