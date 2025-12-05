@@ -12,7 +12,8 @@
 }
 /* Social Sidebar */
 .social-sidebar {
-    width: 300px;
+    width: 100%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
 }
@@ -41,8 +42,14 @@
 
 .social-links {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.social-title {
+    display: none;
 }
 
 .social-link {
