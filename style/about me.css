@@ -162,6 +162,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    align-items: stretch; 
+} 
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -187,4 +195,50 @@
 .two-columns-section .project-tags {
     margin-top: 1rem;
 }
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem; /* Espacement un peu plus aéré */
+    margin-top: 1.5rem;
+}
     
+.tag {
+    background: rgba(255, 255, 255, 0.5); /* Plus lumineux */
+    padding: 0.6rem 1rem;
+    border-radius: 12px; /* Plus arrondi style iOS */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espace entre icône et texte */
+    cursor: default;
+    color: var(--space-gray);
+}
+
+.tag i {
+    opacity: 0.7; /* Icônes légèrement grisées */
+    font-size: 1rem;
+}
+
+/* Effet hover sur les tags */
+.tag:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.tag:hover i {
+    opacity: 1;
+    color: #007aff; /* Touche de bleu Apple au survol (optionnel) */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .two-columns-section {
+        grid-template-columns: 1fr;
+    }
+}

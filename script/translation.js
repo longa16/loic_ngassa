@@ -36,14 +36,14 @@ const translations = {
         'timeline.bac-desc': 'Baccalauréat scientifique · LBNB',
 
         // Compétences
-        'skills.languages': 'Langages: Python (pandas, Matplotlib, scikit-learn, PyTorch/TensorFlow), SQL',
+        'skills.languages': 'Langages: Python (Numpy, Pandas, scikit-learn, PyTorch/TensorFlow), SQL, R, SAS',
         'skills.stats': 'Statistiques, Probabilités',
-        'skills.modeling': 'Modélisation (régression, clustering, arbres, etc.)',
+        'skills.modeling': 'ML, DL, RAG, AGENTIC AI, Fine-tuning',
         'skills.mlops': 'MLOps : MLflow, TensorFlow Serving, Kubernetes, Docker, Git',
         'skills.viz': 'Visualisation : Power BI, Tableau',
         'skills.cloud': 'Cloud computing: AWS, Azure',
         'skills.web': 'Développement web: PHP, JavaScript, HTML/CSS',
-        'skills.devops': 'DevOps: CI/CD, Kubernetes, Docker',
+        'skills.devops': 'DevOps: CI/CD, Kubernetes, Docker, bash, git',
         'skills.blockchain': 'Blockchain/Web3',
 
         // Page Contact (contact.html)
@@ -177,14 +177,14 @@ const translations = {
         'timeline.bac-desc': 'Scientific Baccalaureate · LBNB',
 
         // Compétences
-        'skills.languages': 'Languages: Python (pandas, Matplotlib, scikit-learn, PyTorch/TensorFlow), SQL',
-        'skills.stats': 'Statistics, Probabilities',
-        'skills.modeling': 'Modeling (regression, clustering, trees, etc.)',
-        'skills.mlops': 'MLOps: MLflow, TensorFlow Serving, Kubernetes, Docker, Git',
+        'skills.languages': 'Langages: Python (Numpy, Pandas, scikit-learn, PyTorch/TensorFlow), SQL, R, SAS',
+        'skills.stats': 'Statistiques, Probabilités',
+        'skills.modeling': 'ML, DL, RAG, AGENTIC AI, Fine-tuning',
+        'skills.mlops': 'MLOps : MLflow, TensorFlow Serving, Kubernetes, Docker, Git',
         'skills.viz': 'Visualization: Power BI, Tableau',
         'skills.cloud': 'Cloud computing: AWS, Azure',
         'skills.web': 'Web development: PHP, JavaScript, HTML/CSS',
-        'skills.devops': 'DevOps: CI/CD, Kubernetes, Docker',
+        'skills.devops': 'DevOps: CI/CD, Kubernetes, Docker, bash, git',
         'skills.blockchain': 'Blockchain/Web3',
 
         // Page Contact (contact.html)
@@ -433,6 +433,7 @@ function updateAboutPage(lang) {
 }
 
 // Mise à jour des sections à propos
+// Mise à jour des sections à propos
 function updateAboutSections(lang) {
     const sections = document.querySelectorAll('.about-glass-card h2');
     sections.forEach(section => {
@@ -442,29 +443,20 @@ function updateAboutSections(lang) {
             const sectionNumber = section.querySelector('.section-number');
             if (sectionNumber) {
                 section.innerHTML = `<span class="section-number">01</span> ${translations[lang]['about.philosophy']}`;
-            } else {
-                section.innerHTML = section.innerHTML.replace(/Philosophie|Philosophy/, translations[lang]['about.philosophy']);
             }
-        } else if (text.includes('02')) {
+        } 
+        // CHANGEMENT ICI : 02 devient Compétences (au lieu de Parcours)
+        else if (text.includes('02')) {
             const sectionNumber = section.querySelector('.section-number');
             if (sectionNumber) {
-                section.innerHTML = `<span class="section-number">02</span> ${translations[lang]['about.journey']}`;
-            } else {
-                section.innerHTML = section.innerHTML.replace(/Parcours|Journey/, translations[lang]['about.journey']);
+                section.innerHTML = `<span class="section-number">02</span>${translations[lang]['about.skills']}`;
             }
-        } else if (text.includes('03')) {
+        } 
+        // CHANGEMENT ICI : 03 devient Autres Compétences
+        else if (text.includes('03')) {
             const sectionNumber = section.querySelector('.section-number');
             if (sectionNumber) {
-                section.innerHTML = `<span class="section-number">03</span>${translations[lang]['about.skills']}`;
-            } else {
-                section.innerHTML = section.innerHTML.replace(/Compétences|Skills/, translations[lang]['about.skills']);
-            }
-        } else if (text.includes('04')) {
-            const sectionNumber = section.querySelector('.section-number');
-            if (sectionNumber) {
-                section.innerHTML = `<span class="section-number">04</span>${translations[lang]['about.other-skills']}`;
-            } else {
-                section.innerHTML = section.innerHTML.replace(/Autres Compétences|Other Skills/, translations[lang]['about.other-skills']);
+                section.innerHTML = `<span class="section-number">03</span>${translations[lang]['about.other-skills']}`;
             }
         }
     });
@@ -503,7 +495,7 @@ function updateSkillsTags(lang) {
         const sectionTitle = parentSection?.querySelector('h2')?.textContent || '';
         const tags = container.querySelectorAll('.tag');
 
-        if (sectionTitle.includes('03')) {
+        if (sectionTitle.includes('02')) {
             // Compétences principales
             const skillKeys = ['skills.languages', 'skills.stats', 'skills.modeling', 'skills.mlops', 'skills.viz'];
             tags.forEach((tag, index) => {
@@ -511,7 +503,7 @@ function updateSkillsTags(lang) {
                     tag.textContent = translations[lang][skillKeys[index]];
                 }
             });
-        } else if (sectionTitle.includes('04')) {
+        } else if (sectionTitle.includes('03')) {
             // Autres compétences
             const skillKeys = ['skills.cloud', 'skills.web', 'skills.devops', 'skills.blockchain'];
             tags.forEach((tag, index) => {
