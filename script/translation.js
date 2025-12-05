@@ -638,7 +638,7 @@ function updateSportsContent(lang) {
 function updateWorkPage(lang) {
     // Navigation des onglets
     const navButtons = document.querySelectorAll('.work-nav button');
-    const navKeys = ['work.experiences', 'work.certifications', 'work.projects'];
+    const navKeys = ['work.certifications', 'work.projects'];
 
     navButtons.forEach((button, index) => {
         if (navKeys[index] && translations[lang][navKeys[index]]) {
