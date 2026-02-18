@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Minimal & Intentional</title>
-    
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/about me.css">
     <link rel="stylesheet" href="style/work.css">
     <link rel="stylesheet" href="style/other.css">
     <link rel="stylesheet" href="style/contact.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script src="script/translation.js"></script>
     <script src="script/script.js" defer></script>
     <script src="script/other.js" defer></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJGW5BKD2S"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MJGW5BKD2S');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MJGW5BKD2S');
     </script>
-    
+
     <style>
         /* Ajout pour le défilement fluide */
         html {
             scroll-behavior: smooth;
         }
+
         /* Ajustement pour compenser la barre de menu fixe lors du scroll */
         section {
             scroll-margin-top: 100px;
             padding-top: 2rem;
             padding-bottom: 2rem;
-            min-height: auto; /* Permet aux sections de s'empiler naturellement */
+            min-height: auto;
+            /* Permet aux sections de s'empiler naturellement */
         }
+
         /* Séparateur visuel subtil entre les sections */
         section:not(:last-of-type) {
             border-bottom: 1px solid var(--glass);
@@ -66,9 +70,9 @@
     <section id="home" class="hero">
         <h1>LOIC Y. NGASSA</h1>
         <p>Futur ML Ingénieur / Data scientist, passionné par les nouvelles technologies.</p>
-        
+
         <div class="hero-btns">
-            <a href="assets/Loic_NGASSA-CV.pdf" download="CV_Loic_Ngassa" class="btn btn-primary">
+            <a href="assets/Loic-NGASSA_CV.pdf" download="CV_Loic_Ngassa" class="btn btn-primary">
                 Télécharger mon CV
             </a>
             <a href="#contact" class="btn btn-secondary">
@@ -87,97 +91,342 @@
                 </div>
                 <div style="flex: 2;">
                     <h2 style="margin-bottom: 20px; text-align: center;">À propos de moi</h2>
-                    <p style="margin-bottom: 20px;">Passionné par l'intelligence artificielle et ses applications concrètes, je consacre mon temps à explorer les domaines du Machine Learning, du Deep Learning et de la Data Science. Mon objectif est de développer des solutions intelligentes qui améliorent notre quotidien.</p>
-                    <p style="margin-bottom: 20px;">Convaincu que l'IA représente l'une des révolutions technologiques les plus importantes de notre siècle, je me forme constamment aux dernières avancées dans ce domaine, des modèles de langage aux réseaux de neurones convolutifs, en passant par les systèmes de recommandation.</p>
-                    <p>En parallèle de mes études, je travaille sur divers projets personnels alliant IA et développement web, avec une attention particulière portée à l'expérience utilisateur et aux architectures cloud.</p>
+                    <p style="margin-bottom: 20px;">Passionné par l'intelligence artificielle et ses applications
+                        concrètes, je consacre mon temps à explorer les domaines du Machine Learning, du Deep Learning
+                        et de la Data Science. Mon objectif est de développer des solutions intelligentes qui améliorent
+                        notre quotidien.</p>
+                    <p style="margin-bottom: 20px;">Convaincu que l'IA représente l'une des révolutions technologiques
+                        les plus importantes de notre siècle, je me forme constamment aux dernières avancées dans ce
+                        domaine, des modèles de langage aux réseaux de neurones convolutifs, en passant par les systèmes
+                        de recommandation.</p>
+                    <p>En parallèle de mes études, je travaille sur divers projets personnels alliant IA et
+                        développement web, avec une attention particulière portée à l'expérience utilisateur et aux
+                        architectures cloud.</p>
                 </div>
             </div>
-            
+
             <div class="about-glass-card">
                 <h2><span class="section-number">01</span> Philosophie</h2>
-                <p><i>"L'intelligence artificielle est une extension de l'intelligence humaine, pas une menace."</i><br>- Yann LeCun</p>
+                <p><i>"L'intelligence artificielle est une extension de l'intelligence humaine, pas une
+                        menace."</i><br>- Yann LeCun</p>
             </div>
 
-            <div class="two-columns-section">
-    <div class="about-glass-card skill-card">
-        <h2><span class="section-number">02</span>Compétences</h2>
-        <div class="project-tags">
-            <span class="tag"><i class="fab fa-python"></i> Python (pandas, scikit-learn, PyTorch)</span>
-            <span class="tag"><i class="fas fa-database"></i> SQL, R, SAS</span>
-            <span class="tag"><i class="fas fa-chart-line"></i> Statistiques & Probabilités</span>
-            <span class="tag"><i class="fas fa-project-diagram"></i> Modélisation (régression, clustering...)</span>
-            <span class="tag"><i class="fas fa-cogs"></i> MLOps (Docker, Git, MLflow)</span>
-            <span class="tag"><i class="fas fa-chart-pie"></i> Power BI / Tableau</span>
-        </div>
-    </div>
 
-    <div class="about-glass-card skill-card">
-        <h2><span class="section-number">03</span>Autres Compétences</h2>
-        <div class="project-tags">
-            <span class="tag"><i class="fab fa-aws"></i> Cloud (AWS, Azure)</span>
-            <span class="tag"><i class="fas fa-code"></i> Web (JS, HTML/CSS, PHP)</span>
-            <span class="tag"><i class="fas fa-infinity"></i> DevOps (CI/CD, K8s)</span>
-            <span class="tag"><i class="fab fa-bitcoin"></i> Blockchain / Web3</span>
-        </div>
-    </div>
-</div>
 
-            
+
         </main>
     </section>
 
     <section id="work">
         <div class="work-container">
-            <nav class="work-nav">
-                <ul class="nav-items">
-                    <li class="nav-item"><button data-section="certifications" class="active">Certifications</button></li>
-                    <li class="nav-item"><button data-section="projets">Projets</button></li>
-                </ul>
-            </nav>
 
-            <main class="work-content">
+            <!-- Category 1: Deep Learning & AI -->
+            <div class="bento-section">
+                <div class="category-header">
+                    <h2>Deep Learning / AI</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="bento-grid">
+                    <!-- Featured AI Project -->
+                    <article class="bento-card featured">
+                        <a href="#" class="card-link">
+                            <div class="project-type">Vision par Ordinateur</div>
+                            <h3>Détection d'Objets YoloV8</h3>
+                            <p class="project-description">Implémentation d'un modèle de détection d'objets en temps
+                                réel pour l'analyse de flux vidéo de sécurité. Utilisation de PyTorch et optimisation
+                                pour l'inférence sur Edge Devices.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">YOLO</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </article>
 
-                <section id="certifications" class="content-section active">
-                    <div class="project-card">
-                        <div class="project-header"><h3 class="project-title">SecNumAcademie - ANSSI</h3><span class="project-date">Juillet 2025</span></div>
-                        <div class="cert-content"><img src="assets/anssi-logo.png" alt="Logo ANSSI" class="cert-logo"><div class="cert-text"><p class="project-description">Formation en cybersécurité.</p><a href="#" class="cert-link">Voir la certification</a></div></div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header"><h3 class="project-title">Atelier RGPD – CNIL</h3><span class="project-date">Mai 2025</span></div>
-                        <div class="cert-content"><img src="assets/cnil-logo.png" alt="Logo CNIL" class="cert-logo"><div class="cert-text"><p class="project-description">Sensibilisation au RGPD.</p><a href="#" class="cert-link">Voir la certification</a></div></div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header"><h3 class="project-title">L'IA et moi : Usage éthique</h3><span class="project-date">Juin 2025</span></div>
-                        <div class="cert-content"><img src="assets/cnil-logo.png" alt="Logo" class="cert-logo"><div class="cert-text"><p class="project-description">Usage éthique et raisonné de l'IA.</p><a href="#" class="cert-link">Voir la certification</a></div></div>
-                    </div>
-                </section>
+                    <!-- NLP Project -->
+                    <article class="bento-card">
+                        <a href="#" class="card-link">
+                            <div class="project-type">NLP</div>
+                            <h3>Chatbot LLM Custom</h3>
+                            <p class="project-description">Fine-tuning d'un modèle Llama-2 sur un dataset juridique pour
+                                créer un assistant spécialisé.</p>
+                            <div class="project-tags">
+                                <span class="tag">HuggingFace</span>
+                                <span class="tag">Transformers</span>
+                                <span class="tag">LLM</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </article>
 
-                <section id="projets" class="content-section">
-                     <div class="project-card">
-                        <div class="project-header"><p class="project-description">Retrouvez l'ensemble de mes projets sur mon profil Github</p></div>
-                        <a href="https://github.com/longa16" target="_blank" class="cert-link">Mon profil Github</a>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header"><h3 class="project-title">Blockchain BTC</h3></div>
-                        <div class="cert-content">
-                            <div class="cert-text"><p class="project-description">Simulateur de minage Bitcoin en PHP.</p><a href="#" class="cert-link">Voir le projet</a></div>
+                    <!-- Generative AI -->
+                    <article class="bento-card">
+                        <a href="#" class="card-link">
+                            <div class="project-type">Generative AI</div>
+                            <h3>Génération d'Images GAN</h3>
+                            <p class="project-description">Exploration des architectures GAN pour la génération
+                                synthétique de visages humains.</p>
+                            <div class="project-tags">
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Keras</span>
+                                <span class="tag">GANs</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Reinforcement Learning -->
+                    <article class="bento-card">
+                        <a href="#" class="card-link">
+                            <div class="project-type">Reinforcement Learning</div>
+                            <h3>Agent Autonome (RL)</h3>
+                            <p class="project-description">Création d'un agent capable d'apprendre à jouer à des jeux
+                                Atari via Deep Q-Network (DQN).</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OpenAI Gym</span>
+                                <span class="tag">RL</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Audio Processing -->
+                    <article class="bento-card">
+                        <a href="#" class="card-link">
+                            <div class="project-type">Audio AI</div>
+                            <h3>Reconnaissance Vocale</h3>
+                            <p class="project-description">Système de transcription automatique (STT) utilisant
+                                l'architecture Whisper d'OpenAI fine-tunée.</p>
+                            <div class="project-tags">
+                                <span class="tag">Whisper</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Audio</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Category 2: Machine Learning -->
+            <div class="bento-section">
+                <div class="category-header">
+                    <h2>Machine Learning</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="bento-grid">
+                    <!-- Project 1: NLP Insight (Featured) -->
+                    <article class="bento-card featured">
+                        <a href="https://github.com/longa16/NLP_Insight" target="_blank" class="card-link">
+                            <div class="project-type">NLP / Analyse de Données</div>
+                            <h3>NLP Insight</h3>
+                            <p class="project-description">Pipeline d'analyse de données textuelles pour l'extraction
+                                d'insights et l'analyse de sentiments sur des avis clients ou réseaux sociaux.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLTK/Spacy</span>
+                                <span class="tag">Sentiment Analysis</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 2: RFM Online Retail -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/RFM-Online-Retail" target="_blank" class="card-link">
+                            <div class="project-type">Segmentation Client</div>
+                            <h3>Segmentation RFM Retail</h3>
+                            <p class="project-description">Segmentation avancée de clientèle e-commerce basée sur
+                                l'analyse Récence-Fréquence-Montant (RFM).</p>
+                            <div class="project-tags">
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Clustering</span>
+                                <span class="tag">Marketing Analytics</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 3: Upflit -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/Upflit" target="_blank" class="card-link">
+                            <div class="project-type">Causal Inference</div>
+                            <h3>Upflit (Uplift Modeling)</h3>
+                            <p class="project-description">Modélisation de l'Uplift pour optimiser le ciblage des
+                                campagnes marketing en identifiant les clients persuadables.</p>
+                            <div class="project-tags">
+                                <span class="tag">CausalML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-learn</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 4: Time Series Forecasting -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/Time-series-Forecasting" target="_blank" class="card-link">
+                            <div class="project-type">Séries Temporelles</div>
+                            <h3>Time Series Forecasting</h3>
+                            <p class="project-description">Comparaison de modèles (ARIMA, Prophet, LSTM) pour la
+                                prévision de données temporelles complexes.</p>
+                            <div class="project-tags">
+                                <span class="tag">Prophet</span>
+                                <span class="tag">Statsmodels</span>
+                                <span class="tag">Deep Learning</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 5: ChatNLP -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/ChatNLP" target="_blank" class="card-link">
+                            <div class="project-type">Chatbot</div>
+                            <h3>ChatNLP</h3>
+                            <p class="project-description">Assistant conversationnel intelligent implémentant des
+                                techniques modernes de traitement du langage naturel.</p>
+                            <div class="project-tags">
+                                <span class="tag">NLP</span>
+                                <span class="tag">Chatbot</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Category 3: Autres & Web -->
+            <div class="bento-section">
+                <div class="category-header">
+                    <h2>Autres Projets & Web</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="bento-grid">
+                    <!-- Project 1: Blockchain BTC (Featured) -->
+                    <article class="bento-card featured">
+                        <a href="https://github.com/longa16/Blockchain_BTC" target="_blank" class="card-link">
+                            <div class="project-type">Web3</div>
+                            <h3>Blockchain BTC Simulator</h3>
+                            <p class="project-description">Développement d'un simulateur de minage (Proof of Work) et de
+                                transactions Bitcoin pour comprendre les mécanismes de consensus décentralisés.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Cryptographie</span>
+                                <span class="tag">Algorithmique</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 2: PoleIT -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/PoleIT" target="_blank" class="card-link">
+                            <div class="project-type">DevOps / Web</div>
+                            <h3>Pole IT Website</h3>
+                            <p class="project-description">Site web vitrine pour une association étudiante. Architecture
+                                moderne et pipeline de déploiement continu.</p>
+                            <div class="project-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">CI/CD</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 3: ImmoScan v1 -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/Immoscan-v1" target="_blank" class="card-link">
+                            <div class="project-type">Android App</div>
+                            <h3>ImmoScan v1</h3>
+                            <p class="project-description">Application Android pour la gestion des états des lieux.
+                                Intègre la reconnaissance vocale, la signature numérique et la génération de rapports
+                                PDF.</p>
+                            <div class="project-tags">
+                                <span class="tag">Kotlin</span>
+                                <span class="tag">Jetpack Compose</span>
+                                <span class="tag">MVVM</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 4: Crawlia -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/Crawlia" target="_blank" class="card-link">
+                            <div class="project-type">Web Scraping / SEO</div>
+                            <h3>Crawlia</h3>
+                            <p class="project-description">Application légère de web scraping sous Node.js permettant
+                                d'analyser n'importe quelle URL et de générer un rapport SEO détaillé.</p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">SEO Analytics</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Project 5: Escape Game -->
+                    <article class="bento-card">
+                        <a href="https://github.com/longa16/Escape_Game" target="_blank" class="card-link">
+                            <div class="project-type">Game Dev</div>
+                            <h3>Escape Game 3D</h3>
+                            <p class="project-description">Jeu immersif développé sous Unity avec gestion de la
+                                physique, collecte d'items et design sonore atmosphérique.</p>
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Game Design</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Section Certifications (Keep simpler) -->
+            <div class="bento-section">
+                <div class="category-header">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="cert-grid">
+                    <a href="#" class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="cert-info">
+                            <h4>SecNumAcademie</h4>
+                            <p>ANSSI - Juillet 2025</p>
                         </div>
-                        <div class="project-tags"><span class="tag">Cryptographie</span><span class="tag">PHP</span></div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header"><h3 class="project-title">Pole IT</h3></div>
-                        <div class="cert-content">
-                            <div class="cert-text"><p class="project-description">Site web du centre d'astronomie PoleIT-VAL.</p><a href="#" class="cert-link">Voir le projet</a></div>
+                    </a>
+                    <a href="#" class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="cert-info">
+                            <h4>Atelier RGPD</h4>
+                            <p>CNIL - Mai 2025</p>
                         </div>
-                        <div class="project-tags"><span class="tag">DevOps</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
-                    </div>
-                </section>
-            </main>
+                    </a>
+                    <a href="#" class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                        <div class="cert-info">
+                            <h4>L'IA et moi : Éthique</h4>
+                            <p>Juin 2025</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <script>
+        // Le script de gestion des onglets n'est plus nécessaire avec la grille Bento
+        // Mais nous pouvons ajouter un petit effet d'apparition si désiré
+    </script>
     <section id="other">
         <div class="secondary-nav">
             <nav class="sub-nav">
@@ -192,25 +441,61 @@
         <main class="tab-content-container">
             <div class="tab-content active" id="design-content">
                 <div class="content-grid">
-                    <article class="content-card"><h3>Service Civique</h3><h5>EA Le Sextant</h5><p>Agir pour les personnes en situation de handicap.</p><span class="date">Avril - Sept 2025</span></article>
-                    <article class="content-card"><h3>Mentorat</h3><h5>AFEV</h5><p>Accompagnement éducatif.</p><span class="date">2023-2024</span></article>
+                    <article class="content-card">
+                        <h3>Service Civique</h3>
+                        <h5>EA Le Sextant</h5>
+                        <p>Agir pour les personnes en situation de handicap.</p><span class="date">Avril - Sept
+                            2025</span>
+                    </article>
+                    <article class="content-card">
+                        <h3>Mentorat</h3>
+                        <h5>AFEV</h5>
+                        <p>Accompagnement éducatif.</p><span class="date">2023-2024</span>
+                    </article>
                 </div>
-                 <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+                <div class="experience-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track"></div><button class="carousel-nav prev">←</button><button
+                            class="carousel-nav next">→</button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
             </div>
 
             <div class="tab-content" id="engineering-content">
                 <div class="content-grid">
-                    <article class="content-card"><h3>VivaTech 2025</h3><p>Salon innovation Paris.</p><span class="date">2025</span></article>
-                    <article class="content-card"><h3>ICMAIE</h3><p>Conférence IA & Métavers.</p><span class="date">2025</span></article>
+                    <article class="content-card">
+                        <h3>VivaTech 2025</h3>
+                        <p>Salon innovation Paris.</p><span class="date">2025</span>
+                    </article>
+                    <article class="content-card">
+                        <h3>ICMAIE</h3>
+                        <p>Conférence IA & Métavers.</p><span class="date">2025</span>
+                    </article>
                 </div>
-                <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+                <div class="experience-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track"></div><button class="carousel-nav prev">←</button><button
+                            class="carousel-nav next">→</button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
             </div>
 
             <div class="tab-content" id="photography-content">
-                 <div class="content-grid">
-                    <article class="content-card"><h3>Basketball</h3><p>Passion et compétition.</p><span class="date">2013-Présent</span></article>
+                <div class="content-grid">
+                    <article class="content-card">
+                        <h3>Basketball</h3>
+                        <p>Passion et compétition.</p><span class="date">2013-Présent</span>
+                    </article>
                 </div>
-                <div class="experience-carousel"><div class="carousel-container"><div class="carousel-track"></div><button class="carousel-nav prev">←</button><button class="carousel-nav next">→</button></div><div class="carousel-dots"></div></div>
+                <div class="experience-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track"></div><button class="carousel-nav prev">←</button><button
+                            class="carousel-nav next">→</button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
             </div>
         </main>
     </section>
@@ -220,10 +505,14 @@
             <div class="social-sidebar">
                 <div class="social-glass-card">
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/loïc-ngassa/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
-                        <a href="https://github.com/longa16" target="_blank" class="social-link"><i class="fab fa-github"></i><span>GitHub</span></a>
-                        <a href="https://x.com/WangJim14" target="_blank" class="social-link"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                        <a href="mailto:yannngassa35@gmail.com" class="social-link"><i class="fas fa-envelope"></i><span>Email</span></a>
+                        <a href="https://www.linkedin.com/in/loïc-ngassa/" target="_blank" class="social-link"><i
+                                class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                        <a href="https://github.com/longa16" target="_blank" class="social-link"><i
+                                class="fab fa-github"></i><span>GitHub</span></a>
+                        <a href="https://x.com/WangJim14" target="_blank" class="social-link"><i
+                                class="fab fa-twitter"></i><span>Twitter</span></a>
+                        <a href="mailto:yannngassa35@gmail.com" class="social-link"><i
+                                class="fas fa-envelope"></i><span>Email</span></a>
                     </div>
                 </div>
             </div>
@@ -237,16 +526,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const buttons = document.querySelectorAll('.work-nav .nav-item button');
-            if(buttons.length > 0) {
+            if (buttons.length > 0) {
                 buttons.forEach(button => {
                     button.addEventListener('click', () => {
                         document.querySelectorAll('.work-nav .nav-item button').forEach(btn => btn.classList.remove('active'));
                         document.querySelectorAll('.work-content .content-section').forEach(section => section.classList.remove('active'));
-                        
+
                         button.classList.add('active');
                         const sectionId = button.getAttribute('data-section');
                         const targetSection = document.getElementById(sectionId);
-                        if(targetSection) targetSection.classList.add('active');
+                        if (targetSection) targetSection.classList.add('active');
                     });
                 });
             }
