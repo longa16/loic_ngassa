@@ -1,10 +1,204 @@
+/* Variables locales au composant work */
 :root {
-    --aluminum: #f8f8f8;
-    --space-gray: #1d1d1f;
-    --glass: rgba(255, 255, 255, 0.08); /* Pour le fond du site, souvent sombre ou clair selon le thème */
-    --card-bg: rgba(255, 255, 255, 0.65); /* Fond des cartes */
-    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --card-bg: rgba(255, 255, 255, 0.65);
     --border-radius: 24px;
+}
+
+/* ===== Tech Stack Bar ===== */
+.tech-stack-bar {
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--space-gray);
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.tech-pill {
+    background: rgba(29, 29, 31, 0.06);
+    color: var(--space-gray);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.tech-pill:hover {
+    background: var(--space-gray);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== Projets Phares (Featured Grid) ===== */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.project-card .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.project-badge {
+    display: inline-block;
+    background: var(--space-gray);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    width: fit-content;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--space-gray);
+    line-height: 1.3;
+    margin-top: 0.3rem;
+}
+
+.project-card .project-description {
+    font-size: 0.88rem;
+    color: #515154;
+    line-height: 1.55;
+    flex-grow: 1;
+}
+
+.project-card .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.project-card .icon-link {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: var(--transition);
+    font-size: 0.75rem;
+}
+
+.project-card:hover .icon-link {
+    opacity: 1;
+    transform: scale(1);
+    color: #007aff;
+}
+
+/* ===== Autres Réalisations (Compact Grid) ===== */
+.compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+}
+
+.compact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.45);
+    padding: 1rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.compact-card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.compact-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--space-gray);
+    margin-bottom: 0.15rem;
+}
+
+.compact-info p {
+    font-size: 0.78rem;
+    color: #86868b;
+    line-height: 1.3;
+}
+
+.compact-tags {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+
+.compact-tags .tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.55rem;
+    background: rgba(0, 0, 0, 0.04);
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Conteneur Principal */
@@ -14,7 +208,8 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem; /* Espace entre les catégories */
+    gap: 4rem;
+    /* Espace entre les catégories */
 }
 
 /* Titres de Catégories */
@@ -42,168 +237,94 @@
     color: #666;
 }
 
-/* Grille Bento */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.5rem;
-    grid-auto-rows: minmax(280px, auto); /* Hauteur minimale agréable */
-}
 
-/* Carte Bento Standard */
-.bento-card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-}
-
-.bento-card:hover {
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    background: rgba(255, 255, 255, 0.8);
-    border-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Styles spécifiques pour les cartes "Featured" (optionnel, pour varier la grille) */
-.bento-card.featured {
-    grid-column: span 2;
-    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(240,240,245,0.7) 100%);
-}
-
-@media (max-width: 768px) {
-    .bento-card.featured {
-        grid-column: span 1;
-    }
-    .bento-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Contenu de la Carte */
-.project-type {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #86868b;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.bento-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-    color: var(--space-gray);
-    line-height: 1.2;
-}
-
-.project-description {
-    font-size: 1rem;
-    color: #515154;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    flex-grow: 1; /* Pousse les tags vers le bas */
-}
-
-/* Tags */
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: auto; /* S'assure que les tags sont en bas */
-}
-
-.tag {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--space-gray);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* Liens (Overlay) */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-}
-
-.icon-link {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: var(--transition);
-}
-
-.bento-card:hover .icon-link {
-    opacity: 1;
-    transform: scale(1);
-    color: #007aff;
-}
-
-/* Section Certifications (Style compact) */
+/* Section Certifications */
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
 }
 
 .cert-card {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     padding: 1.5rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.1rem;
     transition: var(--transition);
+    position: relative;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .cert-card:hover {
-    background: white;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
 }
 
-.cert-icon {
-    font-size: 1.5rem;
+.cert-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(29, 29, 31, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
     color: var(--space-gray);
-    opacity: 0.8;
+    transition: var(--transition);
 }
 
-.cert-info h4 {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-    font-weight: 500;
+.cert-card:hover .cert-icon-wrap {
+    background: var(--space-gray);
+    color: white;
 }
 
-.cert-info p {
-    font-size: 0.8rem;
+.cert-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.cert-org {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     color: #86868b;
+    font-weight: 600;
+}
+
+.cert-body h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--space-gray);
+    margin: 0.2rem 0 0.35rem;
+    line-height: 1.3;
+}
+
+.cert-desc {
+    font-size: 0.78rem;
+    color: #6e6e73;
+    line-height: 1.45;
+}
+
+.cert-date {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 0.7rem;
+    color: #86868b;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Animation d'apparition */
@@ -212,6 +333,13 @@
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

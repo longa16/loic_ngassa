@@ -4,7 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Minimal & Intentional</title>
+    <title>Loic Ngassa | ML Engineer & AI
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio de Loic Ngassa, étudiant en ingénierie informatique passionné par l'IA, le Machine Learning et la Data Science. Découvrez mes projets en Deep Learning, NLP, Computer Vision et développement cloud.">
+    <meta name="keywords"
+        content="Loic Ngassa, ML Engineer, Data Scientist, Machine Learning, Deep Learning, NLP, Computer Vision, Python, PyTorch, portfolio">
+    <meta name="author" content="Loic Ngassa">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Loic Ngassa | ML Engineer & AI">
+    <meta property="og:description"
+        content="Étudiant en ingénierie informatique passionné par l'IA et la Data Science. Projets en Deep Learning, NLP, Computer Vision et cloud.">
+    <meta property="og:image" content="assets/favicon.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Loic Ngassa | ML Engineer & Data Scientist">
+    <meta name="twitter:description"
+        content="Portfolio IA & Data Science — projets en Deep Learning, NLP, Computer Vision.">
+    <meta name="twitter:image" content="assets/favicon.png">
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/about me.css">
@@ -28,26 +52,7 @@
         gtag('config', 'G-MJGW5BKD2S');
     </script>
 
-    <style>
-        /* Ajout pour le défilement fluide */
-        html {
-            scroll-behavior: smooth;
-        }
 
-        /* Ajustement pour compenser la barre de menu fixe lors du scroll */
-        section {
-            scroll-margin-top: 100px;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            min-height: auto;
-            /* Permet aux sections de s'empiler naturellement */
-        }
-
-        /* Séparateur visuel subtil entre les sections */
-        section:not(:last-of-type) {
-            border-bottom: 1px solid var(--glass);
-        }
-    </style>
 </head>
 
 <body>
@@ -67,356 +72,320 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <h1>LOIC Y. NGASSA</h1>
-        <p>Futur ML Ingénieur / Data scientist, passionné par les nouvelles technologies.</p>
+    <section id="home" class="hero-intro">
+        <div class="hero-intro-inner">
 
-        <div class="hero-btns">
-            <a href="assets/Loic-NGASSA_CV.pdf" download="CV_Loic_Ngassa" class="btn btn-primary">
-                Télécharger mon CV
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-                Contactez-moi
-            </a>
+            <!-- Colonne gauche : Photo -->
+            <div class="hero-identity">
+                <img src="assets/yann.jpg" alt="Loic Y. Ngassa" class="profile-img">
+                <p class="hero-location"><i class="fas fa-map-marker-alt"></i> France</p>
+            </div>
+
+            <!-- Colonne droite : Texte -->
+            <div class="hero-content">
+                <h1 class="hero-name">Loic Y. <span class="name-accent">Ngassa</span></h1>
+                <p class="hero-title">Ingénieur ML &amp; IA </p>
+
+                <p class="hero-bio">
+                    Ing&#233;nieur en informatique, je me sp&#233;cialise
+                    en
+                    <strong>Machine Learning</strong> et <strong>Deep Learning</strong>.
+                    Je construis, deploie et monitore des modèles de machine learning et
+                    des solutions IA concr&#232;tes des
+                    pipelines RAG aux agents autonomes,
+                    en passant par la computer vision et l&apos;optimisation de l'inference des solutions.
+                </p>
+
+                <div class="hero-btns">
+                    <a href="assets/Loic-NGASSA_CV.pdf" download="CV_Loic_Ngassa" class="btn btn-primary" id="btn-cv">
+                        T&#233;l&#233;charger mon CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="btn-contact">
+                        Contactez-moi
+                    </a>
+                </div>
+
+                <blockquote class="hero-quote">
+                    <i>&ldquo;L&apos;IA est une extension de l&apos;intelligence humaine, pas une menace.&rdquo;</i>
+                    <cite>&#8212; Yann LeCun</cite>
+                </blockquote>
+            </div>
+
         </div>
     </section>
-
-    <section id="about">
-        <main class="about-container">
-            <div class="profile-glass-card" style="display: flex; gap: 3rem; align-items: center; text-align: left;">
-                <div style="flex: 1;">
-                    <img style="margin-left: 60px;" src="assets/yann.jpg" alt="LOIC Y. NGASSA" class="profile-img">
-                    <h1 style="font-size: 1.5rem;">LOIC Y. NGASSA</h1>
-                    <p class="subtitle">Étudiant en Ingénierie Informatique</p>
-                </div>
-                <div style="flex: 2;">
-                    <h2 style="margin-bottom: 20px; text-align: center;">À propos de moi</h2>
-                    <p style="margin-bottom: 20px;">Passionné par l'intelligence artificielle et ses applications
-                        concrètes, je consacre mon temps à explorer les domaines du Machine Learning, du Deep Learning
-                        et de la Data Science. Mon objectif est de développer des solutions intelligentes qui améliorent
-                        notre quotidien.</p>
-                    <p style="margin-bottom: 20px;">Convaincu que l'IA représente l'une des révolutions technologiques
-                        les plus importantes de notre siècle, je me forme constamment aux dernières avancées dans ce
-                        domaine, des modèles de langage aux réseaux de neurones convolutifs, en passant par les systèmes
-                        de recommandation.</p>
-                    <p>En parallèle de mes études, je travaille sur divers projets personnels alliant IA et
-                        développement web, avec une attention particulière portée à l'expérience utilisateur et aux
-                        architectures cloud.</p>
-                </div>
-            </div>
-
-            <div class="about-glass-card">
-                <h2><span class="section-number">01</span> Philosophie</h2>
-                <p><i>"L'intelligence artificielle est une extension de l'intelligence humaine, pas une
-                        menace."</i><br>- Yann LeCun</p>
-            </div>
-
-
-
-
-        </main>
-    </section>
-
     <section id="work">
         <div class="work-container">
 
-            <!-- Category 1: Deep Learning & AI -->
-            <div class="bento-section">
-                <div class="category-header">
-                    <h2>Deep Learning / AI</h2>
-                    <span class="category-count">05</span>
-                </div>
-                <div class="bento-grid">
-                    <!-- Featured AI Project -->
-                    <article class="bento-card featured">
-                        <a href="#" class="card-link">
-                            <div class="project-type">Vision par Ordinateur</div>
-                            <h3>Détection d'Objets YoloV8</h3>
-                            <p class="project-description">Implémentation d'un modèle de détection d'objets en temps
-                                réel pour l'analyse de flux vidéo de sécurité. Utilisation de PyTorch et optimisation
-                                pour l'inférence sur Edge Devices.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">PyTorch</span>
-                                <span class="tag">OpenCV</span>
-                                <span class="tag">YOLO</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- NLP Project -->
-                    <article class="bento-card">
-                        <a href="#" class="card-link">
-                            <div class="project-type">NLP</div>
-                            <h3>Chatbot LLM Custom</h3>
-                            <p class="project-description">Fine-tuning d'un modèle Llama-2 sur un dataset juridique pour
-                                créer un assistant spécialisé.</p>
-                            <div class="project-tags">
-                                <span class="tag">HuggingFace</span>
-                                <span class="tag">Transformers</span>
-                                <span class="tag">LLM</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- Generative AI -->
-                    <article class="bento-card">
-                        <a href="#" class="card-link">
-                            <div class="project-type">Generative AI</div>
-                            <h3>Génération d'Images GAN</h3>
-                            <p class="project-description">Exploration des architectures GAN pour la génération
-                                synthétique de visages humains.</p>
-                            <div class="project-tags">
-                                <span class="tag">TensorFlow</span>
-                                <span class="tag">Keras</span>
-                                <span class="tag">GANs</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- Reinforcement Learning -->
-                    <article class="bento-card">
-                        <a href="#" class="card-link">
-                            <div class="project-type">Reinforcement Learning</div>
-                            <h3>Agent Autonome (RL)</h3>
-                            <p class="project-description">Création d'un agent capable d'apprendre à jouer à des jeux
-                                Atari via Deep Q-Network (DQN).</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OpenAI Gym</span>
-                                <span class="tag">RL</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- Audio Processing -->
-                    <article class="bento-card">
-                        <a href="#" class="card-link">
-                            <div class="project-type">Audio AI</div>
-                            <h3>Reconnaissance Vocale</h3>
-                            <p class="project-description">Système de transcription automatique (STT) utilisant
-                                l'architecture Whisper d'OpenAI fine-tunée.</p>
-                            <div class="project-tags">
-                                <span class="tag">Whisper</span>
-                                <span class="tag">PyTorch</span>
-                                <span class="tag">Audio</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-arrow-right"></i></div>
-                        </a>
-                    </article>
+            <!-- Bandeau Tech Stack -->
+            <div class="tech-stack-bar">
+                <h2 class="section-heading">Stack Technique</h2>
+                <div class="tech-pills">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">PyTorch</span>
+                    <span class="tech-pill">TensorFlow</span>
+                    <span class="tech-pill">Scikit-learn</span>
+                    <span class="tech-pill">LangChain</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">HuggingFace</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">Kubernetes</span>
+                    <span class="tech-pill">SQL</span>
                 </div>
             </div>
 
-            <!-- Category 2: Machine Learning -->
+            <!-- Projets Phares -->
             <div class="bento-section">
                 <div class="category-header">
-                    <h2>Machine Learning</h2>
-                    <span class="category-count">05</span>
+                    <h2>Projets Phares</h2>
+                    <span class="category-count">06</span>
                 </div>
-                <div class="bento-grid">
-                    <!-- Project 1: NLP Insight (Featured) -->
-                    <article class="bento-card featured">
-                        <a href="https://github.com/longa16/NLP_Insight" target="_blank" class="card-link">
-                            <div class="project-type">NLP / Analyse de Données</div>
-                            <h3>NLP Insight</h3>
-                            <p class="project-description">Pipeline d'analyse de données textuelles pour l'extraction
-                                d'insights et l'analyse de sentiments sur des avis clients ou réseaux sociaux.</p>
+                <div class="featured-grid">
+
+                    <!-- YOLOv11-SAM -->
+                    <article class="project-card">
+                        <a href="https://github.com/longa16/YOLOv11-SAM" target="_blank" class="card-link">
+                            <span class="project-badge">Computer Vision</span>
+                            <h3>YOLOv11-SAM Pipeline</h3>
+                            <p class="project-description">Pipeline YOLOv11-seg + SAM pour la segmentation d'objets.
+                                Benchmark de 4 architectures avec interface Gradio.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
-                                <span class="tag">NLTK/Spacy</span>
-                                <span class="tag">Sentiment Analysis</span>
+                                <span class="tag">YOLOv11</span>
+                                <span class="tag">SAM</span>
+                                <span class="tag">Gradio</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
                     </article>
 
-                    <!-- Project 2: RFM Online Retail -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/RFM-Online-Retail" target="_blank" class="card-link">
-                            <div class="project-type">Segmentation Client</div>
-                            <h3>Segmentation RFM Retail</h3>
-                            <p class="project-description">Segmentation avancée de clientèle e-commerce basée sur
-                                l'analyse Récence-Fréquence-Montant (RFM).</p>
+                    <!-- E-Agent -->
+                    <article class="project-card">
+                        <a href="https://github.com/longa16/E-Agent" target="_blank" class="card-link">
+                            <span class="project-badge">Agentic AI</span>
+                            <h3>E-Agent, Assistant Email IA</h3>
+                            <p class="project-description">Agent autonome de gestion d'emails : tri,
+                                r&eacute;sum&eacute;s Qwen-27B, dict&eacute;e vocale Whisper, lecture TTS. Backend
+                                FastAPI + OAuth2 Gmail.</p>
                             <div class="project-tags">
-                                <span class="tag">Pandas</span>
-                                <span class="tag">Clustering</span>
-                                <span class="tag">Marketing Analytics</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Groq</span>
+                                <span class="tag">Whisper</span>
+                                <span class="tag">Docker</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
                     </article>
 
-                    <!-- Project 3: Upflit -->
-                    <article class="bento-card">
+                    <!-- RAG Benchmark -->
+                    <article class="project-card">
+                        <a href="https://github.com/longa16/BENCHMARK" target="_blank" class="card-link">
+                            <span class="project-badge">MLOps</span>
+                            <h3>My RAG Pipeline</h3>
+                            <p class="project-description">Construction et &Eacute;valuation de pipelines RAG avec
+                                m&eacute;triques
+                                RAGAS (faithfulness, relevancy). Mod&egrave;les HuggingFace.</p>
+                            <div class="project-tags">
+                                <span class="tag">RAG</span>
+                                <span class="tag">RAGAS</span>
+                                <span class="tag">LangChain</span>
+                                <span class="tag">HuggingFace</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- NLP Insight -->
+                    <article class="project-card">
+                        <a href="https://github.com/longa16/NLP_Insight" target="_blank" class="card-link">
+                            <span class="project-badge">NLP</span>
+                            <h3>NLP Insight</h3>
+                            <p class="project-description">Extraction automatique d'insights depuis des milliers d'avis
+                                clients via
+                                Topic Modeling NMF + TF-IDF pour identifier les points de friction spécifiques sans
+                                lecture manuelle.</p>
+                            <div class="project-tags">
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">NMF</span>
+                                <span class="tag">TF-IDF</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Upflit -->
+                    <article class="project-card">
                         <a href="https://github.com/longa16/Upflit" target="_blank" class="card-link">
-                            <div class="project-type">Causal Inference</div>
-                            <h3>Upflit (Uplift Modeling)</h3>
-                            <p class="project-description">Modélisation de l'Uplift pour optimiser le ciblage des
-                                campagnes marketing en identifiant les clients persuadables.</p>
+                            <span class="project-badge">Causal ML</span>
+                            <h3>Upflit &mdash; Uplift Modeling</h3>
+                            <p class="project-description">Mod&eacute;lisation uplift T-Learner sur 64k clients.
+                                Identifie causalement l'impact des campagnes marketing.</p>
                             <div class="project-tags">
                                 <span class="tag">CausalML</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">RandomForest</span>
+                                <span class="tag">A/B Testing</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
                     </article>
 
-                    <!-- Project 4: Time Series Forecasting -->
-                    <article class="bento-card">
+                    <!-- Time Series Forecasting -->
+                    <article class="project-card">
                         <a href="https://github.com/longa16/Time-series-Forecasting" target="_blank" class="card-link">
-                            <div class="project-type">Séries Temporelles</div>
+                            <span class="project-badge">Séries Temporelles</span>
                             <h3>Time Series Forecasting</h3>
-                            <p class="project-description">Comparaison de modèles (ARIMA, Prophet, LSTM) pour la
-                                prévision de données temporelles complexes.</p>
+                            <p class="project-description">Prévoir les ventes futures à partir des données historiques
+                                de ventes quotidiennes.
+                                L'objectif est de comprendre les tendances et la saisonnalité de la demande client afin
+                                d'optimiser la planification
+                                logistique, les prévisions de stock et les ressources.</p>
                             <div class="project-tags">
                                 <span class="tag">Prophet</span>
+                                <span class="tag">LSTM</span>
                                 <span class="tag">Statsmodels</span>
-                                <span class="tag">Deep Learning</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
                     </article>
 
-                    <!-- Project 5: ChatNLP -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/ChatNLP" target="_blank" class="card-link">
-                            <div class="project-type">Chatbot</div>
-                            <h3>ChatNLP</h3>
-                            <p class="project-description">Assistant conversationnel intelligent implémentant des
-                                techniques modernes de traitement du langage naturel.</p>
-                            <div class="project-tags">
-                                <span class="tag">NLP</span>
-                                <span class="tag">Chatbot</span>
-                                <span class="tag">Python</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
                 </div>
             </div>
 
-            <!-- Category 3: Autres & Web -->
+            <!-- Autres Réalisation -->
             <div class="bento-section">
                 <div class="category-header">
-                    <h2>Autres Projets & Web</h2>
-                    <span class="category-count">05</span>
+                    <h2>Autres R&eacute;alisations</h2>
                 </div>
-                <div class="bento-grid">
-                    <!-- Project 1: Blockchain BTC (Featured) -->
-                    <article class="bento-card featured">
-                        <a href="https://github.com/longa16/Blockchain_BTC" target="_blank" class="card-link">
-                            <div class="project-type">Web3</div>
-                            <h3>Blockchain BTC Simulator</h3>
-                            <p class="project-description">Développement d'un simulateur de minage (Proof of Work) et de
-                                transactions Bitcoin pour comprendre les mécanismes de consensus décentralisés.</p>
-                            <div class="project-tags">
-                                <span class="tag">PHP</span>
-                                <span class="tag">Cryptographie</span>
-                                <span class="tag">Algorithmique</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
+                <div class="compact-grid">
 
-                    <!-- Project 2: PoleIT -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/PoleIT" target="_blank" class="card-link">
-                            <div class="project-type">DevOps / Web</div>
-                            <h3>Pole IT Website</h3>
-                            <p class="project-description">Site web vitrine pour une association étudiante. Architecture
-                                moderne et pipeline de déploiement continu.</p>
-                            <div class="project-tags">
-                                <span class="tag">Docker</span>
-                                <span class="tag">Kubernetes</span>
-                                <span class="tag">CI/CD</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
+                    <a href="https://github.com/longa16/GPU_Puzzle" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>GPU Puzzle</h4>
+                            <p>Optimisation GPU &amp; CUDA en Python</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">CUDA</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </a>
 
-                    <!-- Project 3: ImmoScan v1 -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/Immoscan-v1" target="_blank" class="card-link">
-                            <div class="project-type">Android App</div>
-                            <h3>ImmoScan v1</h3>
-                            <p class="project-description">Application Android pour la gestion des états des lieux.
-                                Intègre la reconnaissance vocale, la signature numérique et la génération de rapports
-                                PDF.</p>
-                            <div class="project-tags">
-                                <span class="tag">Kotlin</span>
-                                <span class="tag">Jetpack Compose</span>
-                                <span class="tag">MVVM</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
 
-                    <!-- Project 4: Crawlia -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/Crawlia" target="_blank" class="card-link">
-                            <div class="project-type">Web Scraping / SEO</div>
-                            <h3>Crawlia</h3>
-                            <p class="project-description">Application légère de web scraping sous Node.js permettant
-                                d'analyser n'importe quelle URL et de générer un rapport SEO détaillé.</p>
-                            <div class="project-tags">
-                                <span class="tag">Node.js</span>
-                                <span class="tag">Express</span>
-                                <span class="tag">SEO Analytics</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
 
-                    <!-- Project 5: Escape Game -->
-                    <article class="bento-card">
-                        <a href="https://github.com/longa16/Escape_Game" target="_blank" class="card-link">
-                            <div class="project-type">Game Dev</div>
-                            <h3>Escape Game 3D</h3>
-                            <p class="project-description">Jeu immersif développé sous Unity avec gestion de la
-                                physique, collecte d'items et design sonore atmosphérique.</p>
-                            <div class="project-tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">Game Design</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
+                    <a href="https://github.com/longa16/RFM-Online-Retail" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>Segmentation RFM</h4>
+                            <p>Clustering client e-commerce K-Means</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">K-Means</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/longa16/Prestashop_K3S" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>Prestashop K3S</h4>
+                            <p>D&eacute;ploiement Kubernetes l&eacute;ger</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">K3S</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/longa16/Immoscan-v1" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>ImmoScan v1</h4>
+                            <p>App Android &mdash; &eacute;tats des lieux</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">MVVM</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/longa16/Blockchain_BTC" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>Blockchain BTC</h4>
+                            <p>Simulateur Proof of Work</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Crypto</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/longa16/Crawlia" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>Crawlia</h4>
+                            <p>Crawler SEO &amp; analyse de pages</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/longa16/Escape_Game" target="_blank" class="compact-card">
+                        <div class="compact-info">
+                            <h4>Escape Game 3D</h4>
+                            <p>Jeu d'&eacute;vasion Unity</p>
+                        </div>
+                        <div class="compact-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                        </div>
+                    </a>
+
                 </div>
             </div>
 
-            <!-- Section Certifications (Keep simpler) -->
+            <!-- Certifications -->
             <div class="bento-section">
                 <div class="category-header">
                     <h2>Certifications</h2>
                 </div>
                 <div class="cert-grid">
-                    <a href="#" class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="cert-info">
-                            <h4>SecNumAcademie</h4>
-                            <p>ANSSI - Juillet 2025</p>
+
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                    </a>
-                    <a href="#" class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
-                        <div class="cert-info">
+                        <div class="cert-body">
+                            <span class="cert-org">ANSSI</span>
+                            <h4>SecNumAcad&eacute;mie</h4>
+                            <p class="cert-desc">Fondamentaux de la cybers&eacute;curit&eacute; : hygi&egrave;ne
+                                num&eacute;rique, cryptographie, s&eacute;curit&eacute; r&eacute;seau.</p>
+                        </div>
+                        <span class="cert-date">Juil. 2025</span>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-org">CNIL</span>
                             <h4>Atelier RGPD</h4>
-                            <p>CNIL - Mai 2025</p>
+                            <p class="cert-desc">Protection des donn&eacute;es personnelles, conformit&eacute; RGPD et
+                                droits des utilisateurs.</p>
                         </div>
-                    </a>
-                    <a href="#" class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                        <div class="cert-info">
-                            <h4>L'IA et moi : Éthique</h4>
-                            <p>Juin 2025</p>
+                        <span class="cert-date">Mai 2025</span>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="fas fa-robot"></i>
                         </div>
-                    </a>
+                        <div class="cert-body">
+                            <span class="cert-org">Fun MOOC</span>
+                            <h4>L'IA et moi : &Eacute;thique</h4>
+                            <p class="cert-desc">Enjeux &eacute;thiques de l'IA, biais algorithmiques, IA responsable et
+                                gouvernance.</p>
+                        </div>
+                        <span class="cert-date">Juin 2025</span>
+                    </div>
+
                 </div>
             </div>
 

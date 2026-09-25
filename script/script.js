@@ -7,8 +7,7 @@ navLinks.className = 'nav-links';
 
 // MODIFICATION ICI : Utilisation des ID (#) au lieu des fichiers .html
 const links = [
-    { text: 'Accueil', href: '#home' },
-    { text: 'À propos', href: '#about' },
+    { text: 'Profil', href: '#home' },
     { text: 'Projets', href: '#work' },
     { text: 'Autres', href: '#other' },
     { text: 'Contact', href: '#contact' }
@@ -19,7 +18,7 @@ links.forEach(link => {
     const a = document.createElement('a');
     a.href = link.href;
     a.textContent = link.text;
-    
+
     // Fermer le menu quand on clique sur un lien
     a.addEventListener('click', () => {
         burger.classList.remove('active');
@@ -40,69 +39,22 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     if (nav.style.display === 'none' || !nav.style.display) {
         nav.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
     } else {
         nav.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 });
 
-// Styles du menu (Inchangé)
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
-    .fullscreen-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        background: var(--glass);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 99;
-        animation: fadeIn 0.3s ease-out;
-    }
-    
-    .nav-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-    
-    .nav-links li {
-        margin: 2rem 0;
-    }
-    
-    .nav-links a {
-        text-decoration: none;
-        color: var(--space-gray);
-        font-weight: 400;
-        font-size: 1.5rem;
-        transition: var(--transition);
-    }
-    
-    .nav-links a:hover {
-        opacity: 0.7;
-    }
-`;
-document.head.appendChild(style);
+
 
 function setupLanguageSwitcher() {
     // Initialisation
     const defaultLang = localStorage.getItem('preferredLang') || 'fr';
     updateContent(defaultLang);
-    
+
     // Gestion des clics
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (e.target.classList.contains('lang-btn')) {
             e.preventDefault();
             const lang = e.target.dataset.lang;
