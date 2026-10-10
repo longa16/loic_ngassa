@@ -78,15 +78,15 @@
             <!-- Colonne gauche : Photo -->
             <div class="hero-identity">
                 <img src="assets/yann.jpg" alt="Loic Y. Ngassa" class="profile-img">
-                <p class="hero-location"><i class="fas fa-map-marker-alt"></i> France</p>
+                <p class="hero-location" data-i18n="hero.location"><i class="fas fa-map-marker-alt"></i> France</p>
             </div>
 
             <!-- Colonne droite : Texte -->
             <div class="hero-content">
                 <h1 class="hero-name">Loic Y. <span class="name-accent">Ngassa</span></h1>
-                <p class="hero-title">Ingénieur ML &amp; IA </p>
+                <p class="hero-title" data-i18n="hero.title">Ingénieur ML &amp; IA </p>
 
-                <p class="hero-bio">
+                <p class="hero-bio" data-i18n="hero.bio">
                     Ing&#233;nieur en informatique, je me sp&#233;cialise
                     en
                     <strong>Machine Learning</strong> et <strong>Deep Learning</strong>.
@@ -97,15 +97,16 @@
                 </p>
 
                 <div class="hero-btns">
-                    <a href="assets/Loic_NGASSA__Resume.pdf" download="CV_Loic_Ngassa" class="btn btn-primary" id="btn-cv">
+                    <a href="assets/Loic_NGASSA__Resume.pdf" download="CV_Loic_Ngassa" class="btn btn-primary"
+                        id="btn-cv" data-i18n="hero.btn.cv">
                         T&#233;l&#233;charger mon CV
                     </a>
-                    <a href="#contact" class="btn btn-secondary" id="btn-contact">
+                    <a href="#contact" class="btn btn-secondary" id="btn-contact" data-i18n="hero.btn.contact">
                         Contactez-moi
                     </a>
                 </div>
 
-                <blockquote class="hero-quote">
+                <blockquote class="hero-quote" data-i18n="hero.quote">
                     <i>&ldquo;L&apos;IA est une extension de l&apos;intelligence humaine, pas une menace.&rdquo;</i>
                     <cite>&#8212; Yann LeCun</cite>
                 </blockquote>
@@ -118,7 +119,7 @@
 
             <!-- Bandeau Tech Stack -->
             <div class="tech-stack-bar">
-                <h2 class="section-heading">Stack Technique</h2>
+                <h2 class="section-heading" data-i18n="tech.title">Stack Technique</h2>
                 <div class="tech-pills">
                     <span class="tech-pill">Python</span>
                     <span class="tech-pill">PyTorch</span>
@@ -136,23 +137,71 @@
             <!-- Projets Phares -->
             <div class="bento-section">
                 <div class="category-header">
-                    <h2>Projets Phares</h2>
+                    <h2 data-i18n="projects.title">Projets </h2>
                     <span class="category-count">06</span>
                 </div>
                 <div class="featured-grid">
 
-                    <!-- YOLOv11-SAM -->
+                    <!-- CIMES -->
                     <article class="project-card">
-                        <a href="https://github.com/longa16/YOLOv11-SAM" target="_blank" class="card-link">
+                        <a href="https://github.com/CimesFrance/cimes_yolo" target="_blank" class="card-link">
                             <span class="project-badge">Computer Vision</span>
-                            <h3>YOLOv11-SAM Pipeline</h3>
-                            <p class="project-description">Pipeline YOLOv11-seg + SAM pour la segmentation d'objets.
-                                Benchmark de 4 architectures avec interface Gradio.</p>
+                            <h3 data-i18n="cimes.title">CIMES Analyse Granulom&eacute;trique IA</h3>
+                            <p class="project-description" data-i18n="cimes.desc">Application industrielle
+                                d&apos;analyse
+                                granulom&eacute;trique par vision artificielle (flux RTSP temps r&eacute;el).
+                                Segmentation YOLO-OBB sur GPU, analyse morphologique scikit-image, courbes interactives,
+                                rapports PDF et syst&egrave;me de licence hors-ligne RSA. Utilis&eacute;e en production
+                                pour l&apos;analyse de ballast.</p>
                             <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">YOLOv11</span>
-                                <span class="tag">SAM</span>
-                                <span class="tag">Gradio</span>
+                                <span class="tag">YOLO-OBB</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">Scikit-Image</span>
+                                <span class="tag">Tkinter</span>
+                                <span class="tag">RSA</span>
+                                <span class="tag">Roboflow</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Longa RAG Chatbot -->
+                    <article class="project-card project-card--featured">
+                        <a href="https://github.com/longa16/Longa" target="_blank" class="card-link">
+                            <span class="project-badge">RAG</span>
+                            <h3 data-i18n="longa.title">Longa Assistant IA Recruiter</h3>
+                            <p class="project-description" data-i18n="longa.desc">Assistant RAG conversationnel
+                                r&eacute;pondant aux questions
+                                des recruteurs &agrave; partir de mes documents personnels. Architecture hybride
+                                MMR&nbsp;+&nbsp;BM25 avec reranker cross-encoder MMarco. G&eacute;n&eacute;ration via
+                                Gemini&nbsp;Flash et évaluation des perfommances avec RAGAS.</p>
+                            <div class="project-tags">
+                                <span class="tag">LangChain</span>
+                                <span class="tag">FAISS</span>
+                                <span class="tag">BM25</span>
+                                <span class="tag">Gemini Flash</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">RAGAS</span>
+                            </div>
+                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                    </article>
+
+                    <!-- Time Series Forecasting -->
+                    <article class="project-card">
+                        <a href="https://github.com/longa16/Time-series-Forecasting" target="_blank" class="card-link">
+                            <span class="project-badge">S&eacute;ries Temporelles</span>
+                            <h3 data-i18n="timeseries.title">Sales Forecasting</h3>
+                            <p class="project-description" data-i18n="timeseries.desc">Pr&eacute;vision des ventes sur
+                                90 jours &agrave; partir
+                                d'une s&eacute;rie temporelle quotidienne multi-magasins (dataset Kaggle). Analyse des
+                                tendances et saisonnalit&eacute;s, mod&eacute;lisation Prophet. &Eacute;valuation MAE
+                                &amp; MAPE pour optimiser la planification logistique et les stocks.</p>
+                            <div class="project-tags">
+                                <span class="tag">Prophet</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Matplotlib</span>
+                                <span class="tag">Scikit-learn</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
@@ -162,33 +211,19 @@
                     <article class="project-card">
                         <a href="https://github.com/longa16/E-Agent" target="_blank" class="card-link">
                             <span class="project-badge">Agentic AI</span>
-                            <h3>E-Agent, Assistant Email IA</h3>
-                            <p class="project-description">Agent autonome de gestion d'emails : tri,
-                                r&eacute;sum&eacute;s Qwen-27B, dict&eacute;e vocale Whisper, lecture TTS. Backend
-                                FastAPI + OAuth2 Gmail.</p>
+                            <h3 data-i18n="eagent.title">E-Agent mon assistant Email IA</h3>
+                            <p class="project-description" data-i18n="eagent.desc">Agent autonome connect&eacute;
+                                &agrave; Gmail via OAuth2 :
+                                r&eacute;sum&eacute;s et classification avec Qwen&nbsp;3.8&nbsp;27B, dict&eacute;e
+                                vocale Whisper, lecture TTS Orpheus. Contr&ocirc;lable en
+                                langage naturel via Discord. D&eacute;ploy&eacute; sur Railway.</p>
                             <div class="project-tags">
                                 <span class="tag">FastAPI</span>
                                 <span class="tag">Groq</span>
+                                <span class="tag">Qwen 27B</span>
                                 <span class="tag">Whisper</span>
-                                <span class="tag">Docker</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- RAG Benchmark -->
-                    <article class="project-card">
-                        <a href="https://github.com/longa16/BENCHMARK" target="_blank" class="card-link">
-                            <span class="project-badge">MLOps</span>
-                            <h3>My RAG Pipeline</h3>
-                            <p class="project-description">Construction et &Eacute;valuation de pipelines RAG avec
-                                m&eacute;triques
-                                RAGAS (faithfulness, relevancy). Mod&egrave;les HuggingFace.</p>
-                            <div class="project-tags">
-                                <span class="tag">RAG</span>
-                                <span class="tag">RAGAS</span>
-                                <span class="tag">LangChain</span>
-                                <span class="tag">HuggingFace</span>
+                                <span class="tag">Gmail API</span>
+                                <span class="tag">Discord Bot</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
@@ -198,51 +233,39 @@
                     <article class="project-card">
                         <a href="https://github.com/longa16/NLP_Insight" target="_blank" class="card-link">
                             <span class="project-badge">NLP</span>
-                            <h3>NLP Insight</h3>
-                            <p class="project-description">Extraction automatique d'insights depuis des milliers d'avis
-                                clients via
-                                Topic Modeling NMF + TF-IDF pour identifier les points de friction spécifiques sans
-                                lecture manuelle.</p>
+                            <h3 data-i18n="nlp.title">NLP Insight et Topic Mining</h3>
+                            <p class="project-description" data-i18n="nlp.desc">Extraction automatique d&apos;insights
+                                depuis des milliers
+                                d&apos;avis clients e-commerce. Topic Modeling NMF + TF-IDF pour identifier les points
+                                de friction (ex. guide des tailles) sans lecture manuelle. R&eacute;sultat :
+                                recommandation strat&eacute;gique actionnables pour r&eacute;duire le taux de retours.
+                            </p>
                             <div class="project-tags">
                                 <span class="tag">Scikit-learn</span>
                                 <span class="tag">NMF</span>
                                 <span class="tag">TF-IDF</span>
-                                <span class="tag">NLP</span>
+                                <span class="tag">Lemmatization</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Seaborn</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
                     </article>
 
-                    <!-- Upflit -->
+                    <!-- Segmentation RFM -->
                     <article class="project-card">
-                        <a href="https://github.com/longa16/Upflit" target="_blank" class="card-link">
-                            <span class="project-badge">Causal ML</span>
-                            <h3>Upflit &mdash; Uplift Modeling</h3>
-                            <p class="project-description">Mod&eacute;lisation uplift T-Learner sur 64k clients.
-                                Identifie causalement l'impact des campagnes marketing.</p>
+                        <a href="https://github.com/longa16/RFM-Online-Retail" target="_blank" class="card-link">
+                            <span class="project-badge">Data Analytics</span>
+                            <h3 data-i18n="rfm.title">Segmentation RFM</h3>
+                            <p class="project-description" data-i18n="rfm.desc">Clustering client e-commerce (K-Means)
+                                sur le dataset Online
+                                Retail. Segmentation RFM (Recency, Frequency, Monetary) pour identifier les profils VIP,
+                                dormants et à risque, et orienter les actions marketing.</p>
                             <div class="project-tags">
-                                <span class="tag">CausalML</span>
-                                <span class="tag">RandomForest</span>
-                                <span class="tag">A/B Testing</span>
-                            </div>
-                            <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
-                        </a>
-                    </article>
-
-                    <!-- Time Series Forecasting -->
-                    <article class="project-card">
-                        <a href="https://github.com/longa16/Time-series-Forecasting" target="_blank" class="card-link">
-                            <span class="project-badge">Séries Temporelles</span>
-                            <h3>Time Series Forecasting</h3>
-                            <p class="project-description">Prévoir les ventes futures à partir des données historiques
-                                de ventes quotidiennes.
-                                L'objectif est de comprendre les tendances et la saisonnalité de la demande client afin
-                                d'optimiser la planification
-                                logistique, les prévisions de stock et les ressources.</p>
-                            <div class="project-tags">
-                                <span class="tag">Prophet</span>
-                                <span class="tag">LSTM</span>
-                                <span class="tag">Statsmodels</span>
+                                <span class="tag">K-Means</span>
+                                <span class="tag">RFM</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Seaborn</span>
                             </div>
                             <div class="icon-link"><i class="fas fa-external-link-alt"></i></div>
                         </a>
@@ -254,86 +277,95 @@
             <!-- Autres Réalisation -->
             <div class="bento-section">
                 <div class="category-header">
-                    <h2>Autres R&eacute;alisations</h2>
+                    <h2 data-i18n="others.title">Autres R&eacute;alisations</h2>
                 </div>
                 <div class="compact-grid">
 
                     <a href="https://github.com/longa16/GPU_Puzzle" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>GPU Puzzle</h4>
-                            <p>Optimisation GPU &amp; CUDA en Python</p>
+                            <p data-i18n="gpu.desc">Programmation parall&egrave;le CUDA &amp; optimisation GPU en Python
+                            </p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">CUDA</span>
                             <span class="tag">Python</span>
+                            <span class="tag">GPU</span>
                         </div>
                     </a>
 
-
-
-                    <a href="https://github.com/longa16/RFM-Online-Retail" target="_blank" class="compact-card">
+                    <a href="https://github.com/longa16/Upflit" target="_blank" class="compact-card">
                         <div class="compact-info">
-                            <h4>Segmentation RFM</h4>
-                            <p>Clustering client e-commerce K-Means</p>
+                            <h4 data-i18n="uplift.title"> Uplift Modeling</h4>
+                            <p data-i18n="uplift.desc">Mod&eacute;lisation causale T-Learner sur 64k clients (dataset
+                                Hillstrom)</p>
                         </div>
                         <div class="compact-tags">
-                            <span class="tag">K-Means</span>
-                            <span class="tag">Pandas</span>
+                            <span class="tag">T-Learner</span>
+                            <span class="tag">A/B Testing</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/longa16/Prestashop_K3S" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>Prestashop K3S</h4>
-                            <p>D&eacute;ploiement Kubernetes l&eacute;ger</p>
+                            <p data-i18n="prestashop.desc">D&eacute;ploiement d&apos;une boutique e-commerce sur cluster
+                                Kubernetes l&eacute;ger (K3S)</p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">K3S</span>
                             <span class="tag">Docker</span>
+                            <span class="tag">Helm</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/longa16/Immoscan-v1" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>ImmoScan v1</h4>
-                            <p>App Android &mdash; &eacute;tats des lieux</p>
+                            <p data-i18n="immo.desc">Application Android d&apos;&eacute;tats des lieux avec architecture
+                                MVVM</p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">Kotlin</span>
-                            <span class="tag">MVVM</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Firebase</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/longa16/Blockchain_BTC" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>Blockchain BTC</h4>
-                            <p>Simulateur Proof of Work</p>
+                            <p data-i18n="btc.desc">Simulateur de blockchain Bitcoin avec algorithme Proof of Work</p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">PHP</span>
-                            <span class="tag">Crypto</span>
+                            <span class="tag">SHA-256</span>
+                            <span class="tag">PoW</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/longa16/Crawlia" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>Crawlia</h4>
-                            <p>Crawler SEO &amp; analyse de pages</p>
+                            <p data-i18n="crawlia.desc">Crawler SEO automatique analyse &amp; rapport de pages web</p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">Node.js</span>
                             <span class="tag">Express</span>
+                            <span class="tag">SEO</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/longa16/Escape_Game" target="_blank" class="compact-card">
                         <div class="compact-info">
                             <h4>Escape Game 3D</h4>
-                            <p>Jeu d'&eacute;vasion Unity</p>
+                            <p data-i18n="escape.desc">Jeu d&apos;&eacute;vasion 3D en Unity avec m&eacute;caniques de
+                                puzzles</p>
                         </div>
                         <div class="compact-tags">
                             <span class="tag">Unity</span>
                             <span class="tag">C#</span>
+                            <span class="tag">3D</span>
                         </div>
                     </a>
 
@@ -343,7 +375,7 @@
             <!-- Certifications -->
             <div class="bento-section">
                 <div class="category-header">
-                    <h2>Certifications</h2>
+                    <h2 data-i18n="certs.title">Certifications</h2>
                 </div>
                 <div class="cert-grid">
 
@@ -354,10 +386,11 @@
                         <div class="cert-body">
                             <span class="cert-org">ANSSI</span>
                             <h4>SecNumAcad&eacute;mie</h4>
-                            <p class="cert-desc">Fondamentaux de la cybers&eacute;curit&eacute; : hygi&egrave;ne
-                                num&eacute;rique, cryptographie, s&eacute;curit&eacute; r&eacute;seau.</p>
+                            <p class="cert-desc" data-i18n="cert.anssi.desc">Fondamentaux de la
+                                cybers&eacute;curit&eacute; : hygi&egrave;ne num&eacute;rique, cryptographie,
+                                s&eacute;curit&eacute; r&eacute;seau.</p>
                         </div>
-                        <span class="cert-date">Juil. 2025</span>
+                        <span class="cert-date" data-i18n="cert.date.juil">Juil. 2025</span>
                     </div>
 
                     <div class="cert-card">
@@ -367,10 +400,10 @@
                         <div class="cert-body">
                             <span class="cert-org">CNIL</span>
                             <h4>Atelier RGPD</h4>
-                            <p class="cert-desc">Protection des donn&eacute;es personnelles, conformit&eacute; RGPD et
-                                droits des utilisateurs.</p>
+                            <p class="cert-desc" data-i18n="cert.cnil.desc">Protection des donn&eacute;es personnelles,
+                                conformit&eacute; RGPD et droits des utilisateurs.</p>
                         </div>
-                        <span class="cert-date">Mai 2025</span>
+                        <span class="cert-date" data-i18n="cert.date.mai">Mai 2025</span>
                     </div>
 
                     <div class="cert-card">
@@ -380,10 +413,10 @@
                         <div class="cert-body">
                             <span class="cert-org">Fun MOOC</span>
                             <h4>L'IA et moi : &Eacute;thique</h4>
-                            <p class="cert-desc">Enjeux &eacute;thiques de l'IA, biais algorithmiques, IA responsable et
-                                gouvernance.</p>
+                            <p class="cert-desc" data-i18n="cert.ia.desc">Enjeux &eacute;thiques de l\'IA, biais
+                                algorithmiques, IA responsable et gouvernance.</p>
                         </div>
-                        <span class="cert-date">Juin 2025</span>
+                        <span class="cert-date" data-i18n="cert.date.juin">Juin 2025</span>
                     </div>
 
                 </div>
@@ -400,9 +433,12 @@
         <div class="secondary-nav">
             <nav class="sub-nav">
                 <ul>
-                    <li><a href="#" class="sub-nav-link active" data-tab="design">Engagements</a></li>
-                    <li><a href="#" class="sub-nav-link" data-tab="engineering">Salon</a></li>
-                    <li><a href="#" class="sub-nav-link" data-tab="photography">Sport/Autres</a></li>
+                    <li><a href="#" class="sub-nav-link active" data-tab="design"
+                            data-i18n="other.nav.engagements">Engagements</a></li>
+                    <li><a href="#" class="sub-nav-link" data-tab="engineering" data-i18n="other.nav.salon">Salon</a>
+                    </li>
+                    <li><a href="#" class="sub-nav-link" data-tab="photography"
+                            data-i18n="other.nav.sport">Sport/Autres</a></li>
                 </ul>
             </nav>
         </div>
@@ -411,15 +447,15 @@
             <div class="tab-content active" id="design-content">
                 <div class="content-grid">
                     <article class="content-card">
-                        <h3>Service Civique</h3>
+                        <h3 data-i18n="civic.title">Service Civique</h3>
                         <h5>EA Le Sextant</h5>
-                        <p>Agir pour les personnes en situation de handicap.</p><span class="date">Avril - Sept
-                            2025</span>
+                        <p data-i18n="civic.desc">Agir pour les personnes en situation de handicap.</p><span
+                            class="date" data-i18n="civic.date">Avril - Sept 2025</span>
                     </article>
                     <article class="content-card">
-                        <h3>Mentorat</h3>
+                        <h3 data-i18n="mentor.title">Mentorat</h3>
                         <h5>AFEV</h5>
-                        <p>Accompagnement éducatif.</p><span class="date">2023-2024</span>
+                        <p data-i18n="mentor.desc">Accompagnement éducatif.</p><span class="date">2023-2024</span>
                     </article>
                 </div>
                 <div class="experience-carousel">
@@ -434,12 +470,14 @@
             <div class="tab-content" id="engineering-content">
                 <div class="content-grid">
                     <article class="content-card">
-                        <h3>VivaTech 2025</h3>
-                        <p>Salon innovation Paris.</p><span class="date">2025</span>
+                        <h3 data-i18n="viva.title">VivaTech 2025</h3>
+                        <p data-i18n="viva.desc">Salon innovation Paris.</p><span class="date"
+                            data-i18n="viva.date">2025</span>
                     </article>
                     <article class="content-card">
                         <h3>ICMAIE</h3>
-                        <p>Conférence IA & Métavers.</p><span class="date">2025</span>
+                        <p data-i18n="icmaie.desc">Conférence IA & Métavers.</p><span class="date"
+                            data-i18n="viva.date">2025</span>
                     </article>
                 </div>
                 <div class="experience-carousel">
@@ -455,7 +493,8 @@
                 <div class="content-grid">
                     <article class="content-card">
                         <h3>Basketball</h3>
-                        <p>Passion et compétition.</p><span class="date">2013-Présent</span>
+                        <p data-i18n="basket.desc">Passion et compétition.</p><span class="date"
+                            data-i18n="basket.date">2013-Présent</span>
                     </article>
                 </div>
                 <div class="experience-carousel">
@@ -489,7 +528,7 @@
     </section>
 
     <footer>
-        <p>© 2025 — Conçu avec intention</p>
+        <p data-i18n="footer">© 2025 — Conçu avec intention</p>
     </footer>
 
     <script>

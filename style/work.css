@@ -43,11 +43,48 @@
     transform: translateY(-2px);
 }
 
-/* ===== Projets Phares (Featured Grid) ===== */
+/* ===== Bento Grid (Projets Phares) ===== */
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 1.2rem;
+}
+
+/* 1 — CIMES : tall (span 2 rows) */
+.featured-grid .project-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+/* 2 — Longa : wide (span 2 cols) */
+.featured-grid .project-card:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+/* 3 — Time Series */
+.featured-grid .project-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* 4 — E-Agent */
+.featured-grid .project-card:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* 5 — NLP Insight : wide (span 2 cols) */
+.featured-grid .project-card:nth-child(5) {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+/* 6 — Upflit */
+.featured-grid .project-card:nth-child(6) {
+    grid-column: 3;
+    grid-row: 3;
 }
 
 .project-card {
@@ -138,6 +175,13 @@
     color: #007aff;
 }
 
+/* ===== Featured Card — placement géré par nth-child ===== */
+@media (max-width: 900px) {
+    .project-card--featured {
+        grid-column: span 1;
+    }
+}
+
 /* ===== Autres Réalisations (Compact Grid) ===== */
 .compact-grid {
     display: grid;
@@ -191,12 +235,19 @@
     border: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .featured-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .compact-grid {
+    .featured-grid .project-card:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-grid {
         grid-template-columns: 1fr;
     }
 }
